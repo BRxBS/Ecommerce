@@ -1,4 +1,4 @@
-import { ShoppingCart,} from "phosphor-react";
+import { ShoppingCart, List } from "phosphor-react";
 import Icon from "./Icon";
 import { Link } from "react-router-dom";
 
@@ -8,11 +8,14 @@ export function Header() {
       <Link to={"/"}>
         <Icon className="m-auto" />
       </Link>
-      
-      <Link to={"/Cart"}>
-      <ShoppingCart size={42} className="m-3 mx-10 text-white" />
-    
-      </Link>
+
+      <div className="flex">
+        <Link to={"/Cart"}>
+          <ShoppingCart size={38} className="m-3 mx-10 text-white" />
+        </Link>
+
+        <List size={38} className="m-3 mx-10 text-white" />
+      </div>
     </header>
   );
 }

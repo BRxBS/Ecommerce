@@ -19,7 +19,7 @@ export const SingleProduct = ( ) => {
         <BarTwo />
         <div className="static mt-[15rem]">
           <div className=" flex m-8 h-[32rem]">
-            <div className="bg-orange-100 w-1/2 mx-28">
+            <div className="bg-gray-100 w-1/2 mx-28 rounded flex justify-center ">
               <div className="">
                 <img src={product.image} alt={product.name} />
               </div>

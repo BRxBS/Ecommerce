@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 export function BarTwo() {
   return (
     <div className="fixed top-[5.5rem] left-0 right-0 max-w-full  py-2 block md:flex  bg-gray-100 ">
-      <p className="m-2 p-4 hidden  md:flex items-center  bg-gray-500 border-red-900">
+      <p className="m-2 p-3 hidden  md:flex items-center  bg-gray-500 border-red-900">
         NOVIDADE{" "}
       </p>
-      <p className="m-2 p-4 hidden  md:flex items-center bg-gray-500 border-red-900">
+      <p className="m-2 p-3 hidden  md:flex items-center bg-gray-500 border-red-900">
         NOVIDADE{" "}
       </p>
-      <p className="m-2 p-4 hidden md:flex items-center bg-gray-500 border-red-900">
+      <p className="m-2 p-3 hidden md:flex items-center bg-gray-500 border-red-900">
         NOVIDADE{" "}
       </p>
-      <p className="m-2 p-4 hidden  md:flex items-center bg-gray-500 border-red-900">
+      <p className="m-2 p-3 hidden  md:flex items-center bg-gray-500 border-red-900">
         NOVIDADE{" "}
       </p>
 
@@ -30,11 +30,9 @@ export function BarTwo() {
         />
       </div>
       <Link to={"/login"}>
-
-      <button className="bg-black p-3 h-16 w-28 ml-10 rounded text-white">
-        SignIn
-      </button>
-        
+        <button className="bg-black p-2 h-14 w-24 ml-10 mr-4 text-2xl rounded text-white">
+          Login
+        </button>
       </Link>
     </div>
   );

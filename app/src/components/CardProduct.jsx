@@ -1,24 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import  products  from "../data/Products";
+import axios from "axios";
+
+const url = "http://localhost:8000/products";
 
 
 export function CardProduct() {
+
+    const [products, setProductes] = useState("");
+
+    const getAllProducts = () => {
+      axios.get(url).then((res) => {
+        const allProducts = res.data;
+        setProductes(allProducts);
+      });
+    };
+    useEffect(() => {
+      getAllProducts();
+    }, []);
+
+    if (!products) return null;
+
+
   return (
     <>
-      <div className="inline-block md:grid gap-4 grid-cols-3 justify-between my-40 md:m-40">
+      <div className="block md:grid grid-cols-3 gap-4 justify-between my-40">
         {products.map((product) => (
           <div
-            className=" w-96 m-8 rounded shadow-2xl border-2 border-black p-2"
+            className=" w-[19rem] m-8 rounded shadow-2xl border-2 border-black p-2"
             key={product._id}
           >
-            <div className=" h-96  flex-row inline-block border-black m-8 p-4">
+            <div className=" h-[23rem]  flex-row inline-block border-black m-4 p-4">
               <Link to={`/products/${product._id}`}>
                 <div>
                   <img
-                    className="h-60 w-80 border-4 rounded p-2 my-2 m-auto bg-white border-black"
-                    src={product.image}
-                    alt={product.name}
+                    className="h-52 w-80 border-4 rounded p-2 my-2 bg-white border-black"
+                    src={product.productImage}
+                    alt={product.productName}
                   />
                 </div>
               </Link>
@@ -29,12 +47,12 @@ export function CardProduct() {
                     className="line-clamp-2 text-ellipsis"
                     to={`/products/${product._id}`}
                   >
-                    {product.name}
+                    {product.productName}
                   </Link>
                 </p>
 
-                <h3 className=" text-3xl border-4 border-black rounded  w-[9rem] flex justify-center mt-[10%] my-2 m-auto">
-                  ${product.price}
+                <h3 className=" text-3xl border-4 border-black rounded  w-[9rem] flex justify-center mt-[10%] m-auto">
+                  ${product.productPrice}
                 </h3>
               </div>
             </div>

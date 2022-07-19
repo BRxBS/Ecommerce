@@ -8,7 +8,7 @@ export function HomePage(){
       <>
         <Header />
         <BarTwo />
-        <div className="inline-block">
+        <div className="block p-6">
           <CardProduct />
         </div>
       </>
