@@ -49,7 +49,7 @@ export function Post() {
             className="block mx-20 bg-gray-100 mt-24"
           >
             <label htmlFor="" className="text-2xl font-semibold">
-              Product Name
+              Product Namee
             </label>{" "}
             <br />
             <input
