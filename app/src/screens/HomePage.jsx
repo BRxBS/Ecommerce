@@ -11,6 +11,7 @@ export function HomePage(){
         <div className="block p-6">
           <CardProduct />
         </div>
+
       </>
     );
 }

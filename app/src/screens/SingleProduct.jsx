@@ -1,17 +1,44 @@
-import products from "../data/Products"
-import React from "react";
 import { Header } from "../components/Header";
 import { Rating } from "../components/Rating";
 import { Message } from "../components/Error"
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { BarTwo } from "../components/BarTwo";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { SideBar } from "../components/sideBar";
+
+//http://localhost:8000/products/:product_id  link na api
+
+//const url = `http://localhost:8000/products`;
 
 
+export const SingleProduct = () => {
 
-export const SingleProduct = ( ) => {
-    const { id } = useParams();
-    const product = products.find((p) => p._id === id);
+  const [product, setProduct] = useState({});
+  const { id } = useParams(); //é o _id
+
+        const getTheProducts = () => {
+          axios
+            .get(`http://localhost:8000/products/`+id)
+            .then((res) => {
+              const Product = res.data;
+              setProduct(Product);
+            });
+        };
+        useEffect(() => {
+         
+          getTheProducts();
+        }, []);
+
+        if (!product) return null;
+
+
+        
+      
+    //product.find((p) => p._id === id);
+    // console.log(product);
+
     
     return (
       <>
@@ -21,19 +48,20 @@ export const SingleProduct = ( ) => {
           <div className=" flex m-8 h-[32rem]">
             <div className="bg-gray-100 w-1/2 mx-28 rounded flex justify-center ">
               <div className="">
-                <img src={product.image} alt={product.name} />
+                <img src={product.productImage} alt={product.productName} />
               </div>
             </div>
             <div className="">
               <div className="">
                 <div className="border-8 border-black rounded mb-4 p-4">
-                  <div className="text-4xl ">{product.name}</div>
+                  <div className="text-4xl ">{product.productName}</div>
                 </div>
 
                 <div className=" block justify-between mx-2 my-4">
                   <div className="my-4 block items-center ">
-                    <h6 className="text-3xl">Price: ${product.price}</h6>
+                    <h6 className="text-3xl">Price: ${product.productPrice}</h6>
                   </div>
+                  
                   <div className=" my-4">
                     <h6 className="text-3xl">Status</h6>
                     {product.countInStock > 0 ? (
@@ -42,16 +70,18 @@ export const SingleProduct = ( ) => {
                       <span>unavailable</span>
                     )}
                   </div>
-                  {product.countInStock > 0 ? (
+                  {product.productQuantity > 0 ? (
                     <>
                       <div className="static">
                         <h6 className="text-3xl">Quantity</h6>
                         <select className="w-16 m-2 border-2 bg-gray-200 border-black ">
-                          {[...Array(product.countInStock).keys()].map((x) => (
-                            <option key={x + 1} value={x + 1}>
-                              {x + 1}
-                            </option>
-                          ))}
+                          {[...Array(product.productQuantity).keys()].map(
+                            (x) => (
+                              <option key={x + 1} value={x + 1}>
+                                {x + 1}
+                              </option>
+                            )
+                          )}
                         </select>
                       </div>
                       <button className="w-28 p-2  mt-20 ml-[14rem] border-[0.25rem] border-black bg-black rounded text-white">
@@ -69,7 +99,7 @@ export const SingleProduct = ( ) => {
             <div className="m-8">
               <p className="p-8 text-2xl ">
                 <strong className="text-3xl">Discripton</strong> <br />
-                {product.description}
+                {product.productDescription}
               </p>
               <br />
               <div className="p-8 text-2xl ">
