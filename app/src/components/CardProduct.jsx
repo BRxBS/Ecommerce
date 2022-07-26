@@ -24,7 +24,7 @@ export function CardProduct() {
 
   return (
     <>
-      <div className="block md:grid grid-cols-3 gap-4 justify-between my-40">
+      <div className="block md:grid grid-cols-3 gap-4 justify-between ">
         {products.map((product) => (
           <div
             className=" w-[19rem] m-8 rounded shadow-2xl border-2 border-black p-2"
