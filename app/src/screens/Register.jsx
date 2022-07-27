@@ -9,10 +9,10 @@ export function Register(){
     return (
       <>
         <Header />
-        <div className="block relative w-[28rem] h-[38rem] m-auto mt-32 border-8 border-black p-2 text-2xl rounded">
+        <div className="block relative w-[28rem] h-[38rem] m-auto mt-2 border-8 border-black p-2 text-2xl rounded">
           <p className="text-4xl font-bold m-2">Login</p>
           <hr />
-          <form className="h-[23rem] p-8 ">
+          <form className="h-[23rem] p-10 ">
             <p>Name</p>
             <input
               className="border-2 border-black p-1 w-[100%]  mb-4"

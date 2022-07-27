@@ -8,7 +8,7 @@ export function Login() {
   return (
     <>
       <Header />
-      <div className="block w-[26rem] h-[30rem] m-auto my-32 border-8 border-black p-2 text-2xl rounded">
+      <div className="block w-[26rem] h-[30rem] m-auto my-2 border-8 border-black p-2 text-2xl rounded">
         <p className="text-4xl font-bold m-4">Login</p>
         <hr />
         <form className=" h-[23rem] p-8 relative">
@@ -32,7 +32,7 @@ export function Login() {
             Login
           </button>
           <br />
-          <Link className="absolute bottom-1 right-5" to={"/register"}>
+          <Link className="absolute bottom-1 right-5 underline" to={"/register"}>
             Create Account
           </Link>
         </form>

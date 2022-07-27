@@ -44,11 +44,15 @@ export const SingleProduct = () => {
       <>
         <Header />
         <BarTwo />
-        <div className="static mt-[15rem]">
+        <div className="static">
           <div className=" flex m-8 h-[32rem]">
             <div className="bg-gray-100 w-1/2 mx-28 rounded flex justify-center ">
-              <div className="">
-                <img src={product.productImage} alt={product.productName} />
+              <div className="flex ">
+                <img
+                  className="h-96 w-96 m-auto border border-black"
+                  src={product.productImage}
+                  alt={product.productName}
+                />
               </div>
             </div>
             <div className="">
@@ -61,7 +65,7 @@ export const SingleProduct = () => {
                   <div className="my-4 block items-center ">
                     <h6 className="text-3xl">Price: ${product.productPrice}</h6>
                   </div>
-                  
+
                   <div className=" my-4">
                     <h6 className="text-3xl">Status</h6>
                     {product.countInStock > 0 ? (

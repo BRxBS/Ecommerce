@@ -41,17 +41,18 @@ export function CardProduct() {
                 </div>
               </Link>
 
-              <div className="h-24 text-2xl m-4">
+              <div className="h-24 text-2xl m-4 ">
                 <p>
                   <Link
-                    className="line-clamp-2 text-ellipsis"
+                    className="line-clamp-1  pl-6 text-ellipsis"
                     to={`/products/${product._id}`}
                   >
                     {product.productName}
                   </Link>
                 </p>
 
-                <h3 className=" text-3xl border-4 border-black rounded  w-[9rem] flex justify-center mt-[10%] m-auto">
+                <h3 className=" text-3xl border-4 border-black rounded 
+                 w-[9rem] flex justify-center mt-[10%] m-auto">
                   ${product.productPrice}
                 </h3>
               </div>

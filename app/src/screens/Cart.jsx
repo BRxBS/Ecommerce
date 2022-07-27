@@ -9,7 +9,7 @@ export function Cart() {
     <>
       <Header />
       {/* Cart */}
-      <div className="mt-40">
+      <div className="m-6">
         <div className="block md:flex h-96">
           <div className="w-1/2 min-h-min mx-24 p-4 border-8 border-black ">
             <h1 className="text-4xl font-bold border-b-2 mb-4 border-black">
