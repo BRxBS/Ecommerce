@@ -20,21 +20,41 @@ export function Login() {
           />
           <p>Password</p>
           <input
-            className="border-2 border-black p-1 w-[100%] mb-4"
+            className="border-2 border-black p-1 w-[100%] "
             type="password"
             placeholder="Password"
           />
+          <div className="flex justify-between ">
+            <div classNAme="checkBox-Content ">
+              <input
+                type="checkbox"
+                id="logCheck"
+                className="text-sm mr-1 accent-gray-800 cursor-pointer "
+              />
+              <label for="logCheck" className="text-sm cursor-pointer ">
+                Remember Me
+              </label>
+            </div>
+            <a href="#" className="text-sm text-gray-400 hover:underline">
+              Forgot Password?
+            </a>
+          </div>
           <br />
           <button
-            className="border p-2 w-24 m-8 absolute left-28 border-black bg-black rounded text-white "
+            className="border p-2 w-24  ml-28 border-black bg-black rounded text-white "
             type="submit"
           >
             Login
           </button>
           <br />
-          <Link className="absolute bottom-1 right-5 underline" to={"/register"}>
-            Create Account
-          </Link>
+          <div className="flex mt-5">
+            <span className="text-base ml-12 font-semibold">
+              Not a Member?
+              <Link className=" ml-2 font- hover:underline" to={"/register"}>
+                Create Account
+              </Link>
+            </span>
+          </div>
         </form>
       </div>
     </>

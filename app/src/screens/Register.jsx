@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {Header} from "../components/Header";
 
 
 export function Register(){
     window.scrollTo(0, 0);
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password1, setPassword1] = useState("");
+    const [password2, setPassword2] = useState("");
+
+    function checkPassword(){
+      if(password1 !== password2){
+        
+      }
+    }
+
+     const fortmatResponse = (res) => {
+       return JSON.stringify(res, null, 2);
+     };
+
+     async function createPost() {
+      const postData = {
+        username: name,
+        email: email,
+        password: password,
+      };
+     }
    
     return (
       <>
@@ -18,24 +41,32 @@ export function Register(){
               className="border-2 border-black p-1 w-[100%]  mb-4"
               type="text"
               placeholder="Username"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
             />
             <p>Email</p>
             <input
               className="border-2 border-black p-1 w-[100%]  mb-4"
               type="email"
               placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
             />
             <p>Password</p>
             <input
               className="border-2 border-black p-1 w-[100%]  mb-4"
               type="password"
               placeholder="Password"
+              onChange={(e) => setPassword1(e.target.value)}
+              value={password1}
             />
             <p>Password</p>
             <input
               className="border-2 border-black p-1 w-[100%]  mb-4"
               type="password"
-              placeholder="Password"
+              placeholder="Confirm Password"
+              onChange={(e) => setPassword2(e.target.value)}
+              value={password2}
             />
 
             <button
