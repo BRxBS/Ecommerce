@@ -12,23 +12,26 @@ export function SideBar() {
       {!open ? (
         <List
           size={38}
-          className="py-1 h-[5.375rem] mx-8 bg-black text-white"
+          className="py-1 h-[5.375rem] mx-8 bg-black text-white cursor-pointer"
           onClick={() => setOpen(!open)}
         />
       ) : (
-        <aside className=" relative bg-black ">
+        <aside className=" relative bg-black w-[7rem] md:w-[10rem]">
           <div className="h-[5.375rem] py-1 bg-black">
             <X
               size={34}
-              className="ml-[6rem] mt-5 text-white"
+              className="ml-14 mt-5 md:ml-[6rem] md:mt-5 text-white cursor-pointer"
               onClick={() => setOpen(!open)}
             />
           </div>
 
           {SideBarData.map((item, index) => {
             return (
-              <ul className="w-40">
-                <li key={index} className="flex p-6  bg-gray-700 text-white ">
+              <ul className="w-40 ">
+                <li
+                  key={index}
+                  className="flex  w-[7rem]  md:w-[10rem] p-2 md:p-6 bg-gray-700 text-white "
+                >
                   <Link to={item.path} className="flex">
                     {item.icon}
                     <span>{item.title}</span>

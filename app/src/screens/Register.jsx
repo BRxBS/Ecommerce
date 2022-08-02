@@ -121,7 +121,7 @@ export function Register() {
           <Login />
         </p>
       ) : (
-        <div className="block relative w-[28rem] h-[38rem] m-auto mt-2 border-8 border-black p-2 text-2xl rounded">
+        <div className="block relative w-[28rem] max-h-[40rem] h-[38rem] m-auto mt-2 border-8 border-black p-2 text-2xl rounded">
           <p
             ref={errRef}
             className={errMsg ? "border border-black" : "hidden"}
@@ -285,13 +285,13 @@ export function Register() {
                   ? true
                   : false
               }
-              className="border absolute bottom-[4.5rem] left-[9.5rem] w-32 h-10 border-black bg-black rounded text-white "
+              className="border relative top-5 left-24 w-32 h-10 border-black bg-black rounded text-white "
               type="submit"
             >
               Register
             </button>
           </form>
-          <p className="absolute bottom-5 right-5">
+          <p className="absolute bottom-3 right-5">
             <Link to={"/login"}>
               I Have Account <strong className="underline">Login</strong>
             </Link>

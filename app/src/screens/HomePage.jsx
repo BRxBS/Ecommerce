@@ -10,7 +10,7 @@ export function HomePage(){
         <Header />
         <BarTwo />
        
-        <div className="block p-6">
+        <div className="block flex-wrap md:pl-20 p-6">
           <CardProduct />
         </div>
 

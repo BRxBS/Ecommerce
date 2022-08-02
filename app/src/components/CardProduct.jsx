@@ -24,10 +24,10 @@ export function CardProduct() {
 
   return (
     <>
-      <div className="block md:grid grid-cols-3 gap-4 justify-between ">
+      <div className="min-w-full  block md:grid grid-cols-3 gap-4  justify-between ">
         {products.map((product) => (
           <div
-            className=" w-[19rem] m-8 rounded shadow-2xl border-2 border-black p-2"
+            className=" w-[19rem] my-4 md:m-4 rounded shadow-2xl border-2 border-black p-2"
             key={product._id}
           >
             <div className=" h-[23rem]  flex-row inline-block border-black m-4 p-4">
@@ -51,8 +51,10 @@ export function CardProduct() {
                   </Link>
                 </p>
 
-                <h3 className=" text-3xl border-4 border-black rounded 
-                 w-[9rem] flex justify-center mt-[10%] m-auto">
+                <h3
+                  className=" text-3xl border-4 border-black rounded 
+                 w-[9rem] flex justify-center mt-[10%] m-auto"
+                >
                   ${product.productPrice}
                 </h3>
               </div>
