@@ -45,11 +45,11 @@ export const SingleProduct = () => {
         <Header />
         <BarTwo />
         <div className="static">
-          <div className=" flex m-8 h-[32rem]">
-            <div className="bg-gray-100 w-1/2 mx-28 rounded flex justify-center ">
-              <div className="flex ">
+          <div className=" block md:flex m-8 h-[32rem]">
+            <div className="bg-gray-100 w-[100%] md:w-1/2 md:mx-28 rounded flex justify-center ">
+              <div className=" block md:flex ">
                 <img
-                  className="h-96 w-96 m-auto border border-black"
+                  className="h-[15rem] w-[30rem] md:h-96 md:w-96 m-auto border border-black"
                   src={product.productImage}
                   alt={product.productName}
                 />
@@ -57,7 +57,7 @@ export const SingleProduct = () => {
             </div>
             <div className="">
               <div className="">
-                <div className="border-8 border-black rounded mb-4 p-4">
+                <div className="border-8 mt-16 md:mt-0 border-black rounded mb-4 p-4">
                   <div className="text-4xl ">{product.productName}</div>
                 </div>
 
@@ -68,7 +68,7 @@ export const SingleProduct = () => {
 
                   <div className=" my-4">
                     <h6 className="text-3xl">Status</h6>
-                    {product.countInStock > 0 ? (
+                    {product.productQuantity > 0 ? (
                       <span>In Stock</span>
                     ) : (
                       <span>unavailable</span>
@@ -88,7 +88,7 @@ export const SingleProduct = () => {
                           )}
                         </select>
                       </div>
-                      <button className="w-28 p-2  mt-20 ml-[14rem] border-[0.25rem] border-black bg-black rounded text-white">
+                      <button className="w-28 p-2 ml-[5rem] md:mt-20 md:ml-[7rem] border-[0.25rem] border-black bg-black rounded text-white">
                         Add To Cart
                       </button>
                     </>
@@ -99,8 +99,8 @@ export const SingleProduct = () => {
           </div>
 
           {/* RATING */}
-          <div className="">
-            <div className="m-8">
+          <div className="block">
+            <div className="md:m-8 mt-64">
               <p className="p-8 text-2xl ">
                 <strong className="text-3xl">Discripton</strong> <br />
                 {product.productDescription}
@@ -146,7 +146,7 @@ export const SingleProduct = () => {
                   <textarea
                     rows="4"
                     cols="50"
-                    className="border-2 bg-gray-200 border-gray-500"
+                    className="w-52 md:w-0 border-2 bg-gray-200 border-gray-500"
                   ></textarea>
                 </div>
                 <div className="my-3">
