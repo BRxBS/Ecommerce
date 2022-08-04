@@ -47,75 +47,69 @@ export function Post() {
   }
 
   return (
-    <div className="block ">
+    <div className="block h-screen">
       <Header />
-      <div className="w-screen bg-gray-100">
-        <form onSubmit={createPost} className="block mx-20 bg-gray-100 mt-24">
-          <label htmlFor="" className="text-2xl font-semibold">
-            Product Namee
+      <div className=" mt-5">
+        <form
+          onSubmit={createPost}
+          className="block m-auto p-4 w-72 rounded shadow-2xl border-2 border-black "
+        >
+          <label htmlFor="name" className="text-2xl font-semibold">
+            Product Name
           </label>{" "}
-          <br />
           <input
             type="text"
+            id="name"
             className="w-64 p-1 rounded border-2 border-black"
             onChange={(e) => setProductName(e.target.value)}
             value={productName}
           />
-          <br />
-          <label htmlFor="" className="text-2xl font-semibold">
+          <label htmlFor="description" className="text-2xl font-semibold">
             Product Description
           </label>{" "}
-          <br />
           <textarea
+            id="description"
             cols="30"
             rows="5"
             className="w-64 p-1 rounded border-2 border-black"
             onChange={(e) => setProductDescription(e.target.value)}
             value={productDescription}
           ></textarea>
-          <br />
-          <label htmlFor="" className="text-2xl font-semibold">
+          <label htmlFor="price" className="text-2xl font-semibold">
             Product Price
           </label>{" "}
-          <br />
           <input
             type="text"
+            id="price"
             className="w-64 p-1 rounded border-2 border-black"
             onChange={(e) => setProductPrice(e.target.value)}
             value={productPrice}
           />
-          <br />
-          <label htmlFor="" className="text-2xl font-semibold">
+          <label htmlFor="quantity" className="text-2xl font-semibold">
             Product Quantity
           </label>{" "}
-          <br />
           <input
             type="text"
+            id="quantity"
             className="w-64 p-1 rounded border-2 border-black"
             onChange={(e) => setProductQuantity(e.target.value)}
             value={productQuantity}
           />
-          <br />
-          <label htmlFor="" className="text-2xl font-semibold">
+          <label htmlFor="image" className="text-2xl font-semibold">
             Product Image
           </label>{" "}
-          <br />
           <input
             type="text"
+            id="image"
             className="w-64 p-1 rounded border-2 border-black"
             onChange={(e) => setProductImage(e.target.value)}
             value={productImage}
           />
-         
-          <Link to={""}>
-            <button
-              className="border p-2 w-24 m-8 absolute left-28 border-black bg-black rounded text-white "
-              type="submit"
-            >
-              submit
-            </button>
-          </Link>
-       
+          <button
+            className="border p-2 w-24 mx-20 my-4 border-black bg-black rounded text-white"
+            type="submit"
+          > submit
+          </button>
         </form>
       </div>
     </div>

@@ -8,7 +8,7 @@ export function Login() {
   return (
     <>
       <Header />
-      <div className="block w-[26rem] h-[30rem] m-auto my-2 border-8 border-black p-2 text-2xl rounded">
+      <div className="block md:w-[26rem] h-[30rem] m-auto my-2 border-8 border-black p-2 text-2xl rounded">
         <p className="text-4xl font-bold m-4">Login</p>
         <hr />
         <form className=" h-[23rem] p-8 relative">
@@ -25,13 +25,13 @@ export function Login() {
             placeholder="Password"
           />
           <div className="flex justify-between ">
-            <div classNAme="checkBox-Content ">
+            <div>
               <input
                 type="checkbox"
                 id="logCheck"
                 className="text-sm mr-1 accent-gray-800 cursor-pointer "
               />
-              <label for="logCheck" className="text-sm cursor-pointer ">
+              <label htmlFor="logCheck" className="text-sm cursor-pointer ">
                 Remember Me
               </label>
             </div>
@@ -41,16 +41,16 @@ export function Login() {
           </div>
           <br />
           <button
-            className="border p-2 w-24  ml-28 border-black bg-black rounded text-white "
+            className="border p-2 w-24 ml-20  md:ml-28 border-black bg-black rounded text-white "
             type="submit"
           >
             Login
           </button>
           <br />
           <div className="flex mt-5">
-            <span className="text-base ml-12 font-semibold">
+            <span className="text-base ml-3 md:ml-12 font-semibold">
               Not a Member?
-              <Link className=" ml-2 font- hover:underline" to={"/register"}>
+              <Link className=" ml-2 hover:underline" to={"/register"}>
                 Create Account
               </Link>
             </span>
