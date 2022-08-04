@@ -29,11 +29,6 @@ export function BarTwo() {
           className="text-white border-2 border-black bg-black h-12 w-10 rounded-sm"
         />
       </div>
-      <Link to={"/login"}>
-        <button className="hidden md:visible bg-black p-2 h-14 w-24 ml-10 mr-4 text-2xl rounded text-white">
-          Login
-        </button>
-      </Link>
     </div>
   );
 }
