@@ -8,7 +8,7 @@ import { Cart } from "./screens/Cart";
 import { Shipping } from "./screens/Shipping";
 import { Payment } from "./screens/Payment";
 import { Post } from "./screens/Post";
-import { SideBar } from "./components/SideBar";
+
 
 
 export function Router() {
@@ -22,7 +22,7 @@ export function Router() {
       <Route path="/shipping" element={<Shipping />} />
       <Route path="/payment" element={<Payment />} />
       <Route path="/post" element={<Post />} />
-      <Route path="/sideBar" element={<SideBar />} />
+
  
     </Routes>
   );
