@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { BarTwo } from "../components/BarTwo";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { SideBar } from "../components/sideBar";
+
 
 //http://localhost:8000/products/:product_id  link na api
 
