@@ -1,9 +1,7 @@
-import {ShoppingCart,List, X} from 'phosphor-react'
-import {  useState, useEffect } from "react";
+import {ShoppingCart,} from 'phosphor-react'
 import Icon from "./Icon";
 import { Link } from "react-router-dom";
-import { useNavigate, useLocation } from "react-router-dom";
-import { SideBar } from './SideBar';
+import { TheModal } from './Modal';
 
 export function Header() {
    // const [open, setOpen] = useState(false);
@@ -21,7 +19,7 @@ export function Header() {
           </Link>
         </div>
       </header>
-      <SideBar />
+      <TheModal />
     </div>
   );
 }
