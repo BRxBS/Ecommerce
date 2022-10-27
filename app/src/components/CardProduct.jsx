@@ -13,6 +13,7 @@ export function CardProduct() {
       axios.get(url).then((res) => {
         const allProducts = res.data;
         setProductes(allProducts);
+        console.log('card products',  allProducts)
       });
     };
     useEffect(() => {
@@ -55,7 +56,7 @@ export function CardProduct() {
                   className=" text-3xl border-4 border-black rounded 
                  w-[9rem] flex justify-center mt-[10%] m-auto"
                 >
-                  ${product.productPrice}
+                  R${product.productPrice}
                 </h3>
               </div>
             </div>
