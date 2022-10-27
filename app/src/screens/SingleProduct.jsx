@@ -20,7 +20,7 @@ export const SingleProduct = () => {
 
         const getTheProducts = () => {
           axios
-            .get(`http://localhost:8000/products/`+id)
+            .get(`http://localhost:8000/products/`+ id)
             .then((res) => {
               const Product = res.data;
               setProduct(Product);
