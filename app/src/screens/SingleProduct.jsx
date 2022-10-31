@@ -17,6 +17,8 @@ export const SingleProduct = () => {
 
   const [product, setProduct] = useState({});
   const { id } = useParams(); //é o _id
+  
+  console.log('id SingleProduct', id )
 
         const getTheProducts = () => {
           axios
