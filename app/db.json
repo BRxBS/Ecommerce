@@ -19,56 +19,64 @@
   ],
   "products": [
     {
-      "product_id": 1,
-      "id": 10,
+      "id" : 1,
+      "category_id": 1,
       "productName": "Black shoes",
       "productImage": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657194562/ecommerce/Captura_da_Web_7-7-2022_84324_i.shafacdn.net_a1bvav.jpg",
       "productPrice": "100"
     },
     {
-      "product_id": 1,
+      "id" : 2,
+      "category_id": 1,
       "productName": "Sapatos Brancos",
       "productImage": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657194586/ecommerce/Captura_da_Web_7-7-2022_8468_shopee.com.br_ajclma.jpg",
       "productPrice": "80"
     },
     {
-      "product_id": 1,
+      "id" : 3,
+      "category_id": 1,
       "productName": "Sapatos Brilhantes",
       "productImage": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657194574/ecommerce/Captura_da_Web_7-7-2022_84816_www.americanas.com.br_ucfusr.jpg",
       "productPrice": "130"
     },
     {
-      "product_id": 2,
+      "id" : 4,
+      "category_id": 2,
       "productName": "Blusa Coruja",
       "productImage": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657195455/ecommerce/blusa/D_NQ_NP_653407-MLB31193549046_062019-W_zuirsz.jpg",
       "productPrice": "50"
     },
     {
-      "product_id": 2,
+      "id" : 5,
+      "category_id": 2,
       "productName": "Blusa Lobos",
       "productImage": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657195454/ecommerce/blusa/camiseta-lobo-ying-yang-estampa-total-lobo_blgs2j.jpg",
       "productPrice": "70"
     },
     {
-      "product_id": 2,
+      "id" : 6,
+      "category_id": 2,
       "productName": "Blusa Simpsons",
       "productImage": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657195455/ecommerce/blusa/camiseta-serie-the-simpsons-estampa-total-the-simpsons_rrkx6r.jpg",
       "productPrice": "50"
     },
     {
-      "product_id": 3,
+      "id" : 7,
+      "category_id": 3,
       "productName": "Calça skiny",
       "productImage": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1666880816/ecommerce/cal%C3%A7as/cal%C3%A7a_3_kwskdk.jpg",
       "productPrice": "100"
     },
     {
-      "product_id": 3,
+      "id" : 8,
+      "category_id": 3,
       "productName": "Calça cintura alta",
       "productImage": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1666880816/ecommerce/cal%C3%A7as/cal%C3%A7a_2_dnmhet.jpg",
       "productPrice": "120"
     },
     {
-      "product_id": 3,
+      "id" : 9,
+      "category_id": 3,
       "productName": "Calça folgada",
       "productImage": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1666880816/ecommerce/cal%C3%A7as/cal%C3%A7a_1_rolbpw.jpg",
       "productPrice": "120"
