@@ -29,10 +29,10 @@ export function CardProduct() {
         {products.map((product) => (
           <div
             className=" w-[19rem] my-4 md:m-4 rounded shadow-2xl border-2 border-black p-2"
-            key={product._id}
+            key={product.id}
           >
             <div className=" h-[23rem]  flex-row inline-block border-black m-4 p-4">
-              <Link to={`/products/${product._id}`}>
+              <Link to={`/products/${product.id}`}>
                 <div>
                   <img
                     className="h-52 w-80 border-4 rounded p-2 my-2 bg-white border-black"
@@ -46,7 +46,7 @@ export function CardProduct() {
                 <p>
                   <Link
                     className="line-clamp-1  pl-6 text-ellipsis"
-                    to={`/products/${product._id}`}
+                    to={`/products/${product.id}`}
                   >
                     {product.productName}
                   </Link>
