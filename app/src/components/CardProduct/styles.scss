@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+
+  //background-color: brown;
+}
+.container-map {
+  width: 19rem;
+  margin: 1rem 1rem;
+  border: 2rem;
+  border-radius: 45;
+  border-color: black;
+  padding: 0.5rem;
+}
+
+// min-w-full  block md:grid grid-cols-3 gap-4  justify-between
