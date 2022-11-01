@@ -1,9 +1,9 @@
-import { Header } from "../components/Header";
-import { Rating } from "../components/Rating";
-import { Message } from "../components/Error"
+import { Header } from "../components/Header/Header";
+import { Rating } from "../components/Rating/Rating";
+import { Message } from "../components/Error/Error"
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { BarTwo } from "../components/BarTwo";
+import { BarTwo } from "../components/BarTwo/BarTwo";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 

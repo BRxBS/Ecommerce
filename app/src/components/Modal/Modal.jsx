@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {List, X } from "phosphor-react";
-import { ModalData } from "./ModalData";
+import { ModalData } from "../ModalData";
 import { Link } from "react-router-dom";
 import Modal from "react-modal";
 
