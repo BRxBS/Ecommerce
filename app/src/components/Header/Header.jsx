@@ -1,7 +1,7 @@
 import {ShoppingCart,} from 'phosphor-react'
-import Icon from "./Icon";
+import Icon from "../Icon/Icon";
 import { Link } from "react-router-dom";
-import { TheModal } from './Modal';
+import { TheModal } from '../Modal/Modal';
 
 export function Header() {
    // const [open, setOpen] = useState(false);
