@@ -9,15 +9,15 @@ export function Header() {
    //   <div className="flex max-h-[5.375rem] min-w-full justify-between bg-black">
    //  <header className="py-1 flex  w-screen items-center justify-between bg-black">
   return (
-    <div >
-      <header className="py-1 flex  w-screen items-center justify-between bg-black">
+    <div className='container' >
+      <header className="header">
         <Link to={"/"}>
-          <Icon className="m-auto" />
+          <Icon className="icon" />
         </Link>
 
         <div>
           <Link to={"/Cart"}>
-            <ShoppingCart size={38} className=" text-white" />
+            <ShoppingCart size={38} className=" ShoppingCart" />
           </Link>
         </div>
       </header>
