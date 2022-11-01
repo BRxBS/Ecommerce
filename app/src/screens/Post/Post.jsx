@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Header } from "../components/Header";
+import { Header } from "../../components/Header";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { SingleProduct } from "./SingleProduct";
-
+import { SingleProduct } from "../SingleProduct/SingleProduct";
 
 const url = "http://localhost:8000/62d18eb2128f70778a91fb7b";
 
@@ -16,8 +15,6 @@ export function Post() {
   const [productImage, setProductImage] = useState("");
 
   const [post, setPost] = useState("");
-
-
 
   const fortmatResponse = (res) => {
     return JSON.stringify(res, null, 2);
@@ -33,7 +30,7 @@ export function Post() {
     };
 
     try {
-      const res = await axios.post(url, postData,);
+      const res = await axios.post(url, postData);
 
       const result = {
         status: res.status,
@@ -108,7 +105,9 @@ export function Post() {
           <button
             className="border p-2 w-24 mx-20 my-4 border-black bg-black rounded text-white"
             type="submit"
-          > submit
+          >
+            {" "}
+            submit
           </button>
         </form>
       </div>

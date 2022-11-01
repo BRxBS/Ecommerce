@@ -1,7 +1,6 @@
 import React from "react";
-import { Header } from "./../components/Header";
+import { Header } from "../../components/Header";
 import { Link } from "react-router-dom";
-
 
 export function Cart() {
   window.scrollTo(0, 0);
@@ -57,11 +56,7 @@ export function Cart() {
           </div>
         </div>
         {/* End of cart iterms */}
-
-       
       </div>
     </>
   );
-};
-
-
+}

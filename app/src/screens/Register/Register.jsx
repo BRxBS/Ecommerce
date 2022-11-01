@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Header } from "../components/Header";
+import { Header } from "../../components/Header";
 import { CheckCircle, Info, XCircle } from "phosphor-react";
 import { Login } from "./Login";
 import axios from "axios";
@@ -34,7 +34,6 @@ export function Register() {
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
-
   useEffect(() => {
     userRef.current.focus();
   }, []);
@@ -66,11 +65,10 @@ export function Register() {
     setErrMsg("");
   }, [user, email, pwd, matchPwd]);
 
-      const fortmatResponse = (res) => {
-        return JSON.stringify(res, null, 2);
-      };
+  const fortmatResponse = (res) => {
+    return JSON.stringify(res, null, 2);
+  };
   async function handleSubmit() {
-
     const postData = {
       username: user,
       email: email,
@@ -78,8 +76,10 @@ export function Register() {
     };
 
     try {
-      const response = await axios.post(url, postData
-      //  JSON.stringify({username:user, email:email, password: pwd}),
+      const response = await axios.post(
+        url,
+        postData
+        //  JSON.stringify({username:user, email:email, password: pwd}),
         // {
 
         //     headers: {'Contetent-Type' : 'application/json'},
@@ -95,21 +95,20 @@ export function Register() {
 
       fortmatResponse(result);
 
-      console.log(response.data)
-      console.log(JSON.stringify(response))
+      console.log(response.data);
+      console.log(JSON.stringify(response));
       setSuccess(true);
-      
     } catch (err) {
-      if(!err?.response){
-        setErrMsg('No Server Response')
-      }else if (err.response?.status === 409) {
-        setErrMsg('User Taken');
-      }else {
-        setErrMsg('Registration Failed')
+      if (!err?.response) {
+        setErrMsg("No Server Response");
+      } else if (err.response?.status === 409) {
+        setErrMsg("User Taken");
+      } else {
+        setErrMsg("Registration Failed");
       }
-      errRef.current.focus()
+      errRef.current.focus();
     }
-  };
+  }
 
   return (
     <>

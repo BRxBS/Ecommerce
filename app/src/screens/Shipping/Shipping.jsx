@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BarTwo } from "../components/BarTwo";
-import {Header} from "../components/Header";
+import { BarTwo } from "../../components/BarTwo";
+import { Header } from "../../components/Header";
 
 export function Shipping() {
   window.scrollTo(0, 0);
@@ -56,6 +56,4 @@ export function Shipping() {
       </div>
     </>
   );
-};
-
-
+}

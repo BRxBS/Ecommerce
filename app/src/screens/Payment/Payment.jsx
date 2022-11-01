@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {Header} from "./../components/Header";
+import { Header } from "../../components/Header";
 
-export function Payment(){
+export function Payment() {
   window.scrollTo(0, 0);
 
   const submitHandler = (e) => {
@@ -39,5 +39,4 @@ export function Payment(){
       </div>
     </>
   );
-};
-
+}
