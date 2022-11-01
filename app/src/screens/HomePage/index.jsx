@@ -1,6 +1,7 @@
 import { Header } from "../../components/Header";
 import { BarTwo } from "../../components/BarTwo";
 import { CardProduct } from "../../components/CardProduct";
+import "./styles.scss";
 
 export function HomePage() {
   window.scrollTo(0, 0);
@@ -8,8 +9,7 @@ export function HomePage() {
     <>
       <Header />
       <BarTwo />
-
-      <div className="block flex-wrap md:pl-20 p-6">
+      <div className="container">
         <CardProduct />
       </div>
     </>

@@ -1,31 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "./styles.scss";
 
 const url = "http://localhost:8000/products";
 
-
 export function CardProduct() {
+  const [products, setProductes] = useState("");
 
-    const [products, setProductes] = useState("");
+  const getAllProducts = () => {
+    axios.get(url).then((res) => {
+      const allProducts = res.data;
+      setProductes(allProducts);
+      console.log("card products", allProducts);
+    });
+  };
+  useEffect(() => {
+    getAllProducts();
+  }, []);
 
-    const getAllProducts = () => {
-      axios.get(url).then((res) => {
-        const allProducts = res.data;
-        setProductes(allProducts);
-        console.log('card products',  allProducts)
-      });
-    };
-    useEffect(() => {
-      getAllProducts();
-    }, []);
-
-    if (!products) return null;
-
+  if (!products) return null;
 
   return (
     <>
-      <div className="min-w-full  block md:grid grid-cols-3 gap-4  justify-between ">
+      <div className="container">
         {products.map((product) => (
           <div
             className=" w-[19rem] my-4 md:m-4 rounded shadow-2xl border-2 border-black p-2"
