@@ -3,7 +3,7 @@ import { Header } from "../../components/Header";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { SingleProduct } from "../SingleProduct/SingleProduct";
+import { SingleProduct } from "../SingleProduct";
 
 const url = "http://localhost:8000/62d18eb2128f70778a91fb7b";
 

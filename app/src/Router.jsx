@@ -7,7 +7,7 @@ import { Register } from "./screens/Register";
 import { Cart } from "./screens/Cart";
 import { Shipping } from "./screens/Shipping";
 import { Payment } from "./screens/Payment";
-import { Post } from "./screens/Post";
+import { Post } from "./screens/Post/inde";
 
 
 

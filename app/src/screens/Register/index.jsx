@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { CheckCircle, Info, XCircle } from "phosphor-react";
-import { Login } from "./Login";
+import { Login } from "../Login";
 import axios from "axios";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-z0-9-_]{3,23}$/;
