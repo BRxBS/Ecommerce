@@ -19,9 +19,9 @@ export function Header() {
           <Link to={"/Cart"}>
             <ShoppingCart size={38} className=" ShoppingCart" />
           </Link>
+      <TheModal />
         </div>
       </header>
-      <TheModal />
     </div>
   );
 }
