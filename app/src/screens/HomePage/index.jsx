@@ -9,9 +9,10 @@ export function HomePage() {
     <>
       <Header />
       <BarTwo />
-      <div className="container">
+      {/* <div className="container">
         <CardProduct />
-      </div>
+      </div> */}
+
     </>
   );
 }
