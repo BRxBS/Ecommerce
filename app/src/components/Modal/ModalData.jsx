@@ -1,5 +1,6 @@
 import { AddressBook, NotePencil, Gear, SignOut, SignIn} from "phosphor-react";
 import React from "react";
+import './styles.scss'
 
 export const ModalData = [
   { id: 1,

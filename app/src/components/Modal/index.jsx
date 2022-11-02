@@ -3,6 +3,7 @@ import {List, X } from "phosphor-react";
 import { ModalData } from "./ModalData";
 import { Link } from "react-router-dom";
 import Modal from "react-modal";
+import './styles.scss'
 
 
 
@@ -21,36 +22,40 @@ export function TheModal() {
   return (
     <>
       {!open ? (
-        <button onClick={openModal}>
+        <button onClick={openModal}  >
           <List
             size={42}
-            className="py-1 h-[5.375rem] mx-8 bg-black text-white cursor-pointer"
+            className="button_styles"
             onClick={() => setOpen(!open)}
           />
         </button>
       ) : (
-        <button onClick={closeModal} className=" py-1 bg-black">
+        <button onClick={closeModal} >
           <X
             size={42}
-            className="py-1 h-[5.375rem] mx-8  text-white cursor-pointer"
+            className="button_styles"
             onClick={() => setOpen(!open)}
           />
           <Modal
             isOpen={ModalIsOpen}
             onRequestClose="disabled"
-            className="fixed top-[5.4rem] right-0"
+            className='modal'
+            //fixed top-[5.4rem] right-0"
             overlayClassName="bg-none"
           >
             {ModalData.map((item) => {
               return (
-                <ul className="w-40 ">
+                <ul className="">
                   <li
                     key={item.id}
-                    className="flex  w-[10rem] p-6 bg-gray-700 text-white "
+                    
                   >
-                    <Link to={item.path} className="flex">
+                    <Link to={item.path}  style={{textDecoration: 'none'}}>
+                      <div>
                       {item.icon}
                       <span>{item.title}</span>
+                      </div>
+
                     </Link>
                   </li>
                 </ul>
