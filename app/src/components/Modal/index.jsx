@@ -22,15 +22,15 @@ export function TheModal() {
   return (
     <>
       {!open ? (
-        <button onClick={openModal}  >
+        <div onClick={openModal} >
           <List
             size={42}
             className="button_styles"
             onClick={() => setOpen(!open)}
           />
-        </button>
+        </div>
       ) : (
-        <button onClick={closeModal} >
+        <div onClick={closeModal} >
           <X
             size={42}
             className="button_styles"
@@ -62,7 +62,7 @@ export function TheModal() {
               );
             })}
           </Modal>
-        </button>
+        </div>
       )}
     </>
   );
