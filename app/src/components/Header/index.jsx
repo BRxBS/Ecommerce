@@ -15,7 +15,7 @@ export function Header() {
           <Icon className="icon" />
         </Link>
 
-        <div>
+        <div className='wrapper_icons'>
           <Link to={"/Cart"}>
             <ShoppingCart size={38} className=" ShoppingCart" />
           </Link>

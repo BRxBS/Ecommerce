@@ -14,9 +14,12 @@
     text-align: left;
     border: 1px solid #ccc;
     position: relative;
+    border: 0.20rem solid black;
     border-radius: 5px;
+    color: black;
     margin-left: 100px;
     background-color: #fff;
+    cursor: pointer;
   }
   
   .dropdown_input {
@@ -50,6 +53,7 @@
         background-color: #9fc3f870;
     }
 }
+
 
 .Wrapper{
     display: flex;
