@@ -1,19 +1,80 @@
-.container {
+.container_CardProduct {
+  justify-content: space-between;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  row-gap: 1rem;
+  width: 19rem;
 
-  //background-color: brown;
+ 
+
 }
-.container-map {
+.container_map {
   width: 19rem;
   margin: 1rem 1rem;
-  border: 2rem;
-  border-radius: 45;
+  border: 1px;
+  border-radius: 3px;
   border-color: black;
   padding: 0.5rem;
 }
 
-// min-w-full  block md:grid grid-cols-3 gap-4  justify-between
+.content_wrapper{
+  height: 20rem;
+  width: 12rem;
+  display: block;
+  align-items: center;
+  flex-direction: row;
+  border: 0.25rem solid black;
+  border-radius: 3px;
+  margin: 1rem;
+  padding: 1rem;
+
+
+
+}
+.div_img{
+  height: 11rem;
+  width: 11rem;
+
+}
+.img{
+  height: 10rem;
+  width: 10rem;
+  border: 0.25rem solid black;
+  border-radius: 3px;
+  padding: 0.50rem;
+  margin-left: 0.50rem;
+  margin-right: 0.50rem;
+  background-color: white;
+ 
+}
+
+.name_price_wraper{
+  font-family: inherit;
+  display: block;
+  background-color: aqua;
+  height: 7rem;
+  width: 10rem;
+  border-radius: 3px;
+  padding: 0.50rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+
+}
+
+.name_link{
+  display: flex;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.price{
+  justify-content: center;
+
+  width: 4rem;
+  margin-top: 10%;
+  margin: auto;
+
+}

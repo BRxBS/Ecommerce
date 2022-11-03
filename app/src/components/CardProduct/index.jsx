@@ -23,27 +23,27 @@ export function CardProduct() {
 
   return (
     <>
-      <div className="container">
+      <div className="container_CardProduct">
         {products.map((product) => (
           <div
-            className=" w-[19rem] my-4 md:m-4 rounded shadow-2xl border-2 border-black p-2"
+            className="container_map"
             key={product.id}
           >
-            <div className=" h-[23rem]  flex-row inline-block border-black m-4 p-4">
+            <div className="content_wrapper">
               <Link to={`/products/${product.id}`}>
-                <div>
+                
                   <img
-                    className="h-52 w-80 border-4 rounded p-2 my-2 bg-white border-black"
+                    className="img"
                     src={product.productImage}
                     alt={product.productName}
                   />
-                </div>
+               
               </Link>
 
-              <div className="h-24 text-2xl m-4 ">
+              <div className="name_price_wraper">
                 <p>
-                  <Link
-                    className="line-clamp-1  pl-6 text-ellipsis"
+                  <Link style={{textDecoration: 'none'}}
+                    className="name_link"
                     to={`/products/${product.id}`}
                   >
                     {product.productName}
@@ -51,8 +51,7 @@ export function CardProduct() {
                 </p>
 
                 <h3
-                  className=" text-3xl border-4 border-black rounded 
-                 w-[9rem] flex justify-center mt-[10%] m-auto"
+                  className="price"
                 >
                   R${product.productPrice}
                 </h3>
