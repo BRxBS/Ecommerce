@@ -9,7 +9,7 @@ export function Header() {
    //   <div className="flex max-h-[5.375rem] min-w-full justify-between bg-black">
    //  <header className="py-1 flex  w-screen items-center justify-between bg-black">
   return (
-    <div className='container' >
+    <div className='container_header' >
       <header className="header">
         <Link to={"/"}>
           <Icon className="icon" />
