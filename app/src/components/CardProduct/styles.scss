@@ -1,13 +1,20 @@
 .container_CardProduct {
-  justify-content: space-between;
-  display: flex;
-  width: 19rem;
-
- 
-
+  display: grid;
+  height: auto;
+  grid-gap: 20px 12px;
+  margin: auto;
+  grid-template-columns: repeat(4, calc(25% - 8px));
+  grid-template-rows: auto;
 }
 .container_map {
-  width: 19rem;
+  display: flex;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+
+  height: auto;
+  width: 15rem;
   margin: 1rem 1rem;
   border: 1px;
   border-radius: 3px;
@@ -15,7 +22,38 @@
   padding: 0.5rem;
 }
 
-.content_wrapper{
+@media (max-width: 990px) {
+  .container_CardProduct {
+    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, calc(25% - 8px));
+    grid-gap: 0.5rem 2rem;
+    grid-template-rows: auto;
+    margin-right: initial;
+    margin-left: initial;
+  }
+}
+
+@media (max-width: 600px) {
+  .container_CardProduct {
+    grid-template-columns: repeat(2, calc(25% - 8px));
+    grid-gap: 0.5rem 6rem;
+    grid-template-rows: auto;
+    margin-right: initial;
+    margin-left: initial;
+  }
+}
+
+@media (max-width: 350px) {
+  .container_CardProduct {
+    grid-template-columns: repeat(1, calc(25% - 8px));
+    grid-gap: 0.5rem 6rem;
+    grid-template-rows: auto;
+    margin-right: initial;
+    margin-left: initial;
+  }
+}
+
+.content_wrapper {
   height: 20rem;
   width: 12rem;
   display: block;
@@ -25,42 +63,35 @@
   border-radius: 3px;
   margin: 1rem;
   padding: 1rem;
-
-
-
 }
-.div_img{
+.div_img {
   height: 11rem;
   width: 11rem;
-
 }
-.img{
+.img {
   height: 10rem;
   width: 10rem;
   border: 0.25rem solid black;
   border-radius: 3px;
-  padding: 0.50rem;
-  margin-left: 0.50rem;
-  margin-right: 0.50rem;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   background-color: white;
- 
 }
 
-.name_price_wraper{
+.name_price_wraper {
   font-family: inherit;
   display: block;
   background-color: aqua;
   height: 7rem;
   width: 10rem;
   border-radius: 3px;
-  padding: 0.50rem;
+  padding: 0.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
-
-
 }
 
-.name_link{
+.name_link {
   display: flex;
   color: black;
   overflow: hidden;
@@ -70,11 +101,10 @@
   -webkit-box-orient: vertical;
 }
 
-.price{
+.price {
   justify-content: center;
 
   width: 4rem;
   margin-top: 10%;
   margin: auto;
-
 }
