@@ -9,10 +9,13 @@ export function HomePage() {
     <>
       <Header />
       <BarTwo />
+<<<<<<< HEAD
        <div className="container_HomePage">
+=======
+      <div className="container_HomePage">
+>>>>>>> 747cb5614311f06824d29cb44fc311b07cbc2632
         <CardProduct />
-      </div> 
-
+      </div>
     </>
   );
 }

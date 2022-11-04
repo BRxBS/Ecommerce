@@ -1,31 +1,35 @@
+<<<<<<< HEAD
 .container_header{
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 
+=======
+.container_Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+>>>>>>> 747cb5614311f06824d29cb44fc311b07cbc2632
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:  0.25rem  0.25rem;                                                                                                                                                              
-    width: 100%;
-    height: 3.60rem;
-    background-color: black;
-
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0.25rem;
+  width: 100%;
+  height: 3.6rem;
+  background-color: black;
 }
-.wrapper_icons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-
+.wrapper_icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.icon{
-    margin: auto;
+.icon {
+  margin: auto;
 }
-.ShoppingCart{
-    margin-right: 1rem;
-    color: white;
+.ShoppingCart {
+  margin-right: 1rem;
+  color: white;
 }
