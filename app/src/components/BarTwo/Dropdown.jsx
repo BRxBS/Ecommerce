@@ -77,7 +77,7 @@ export const Dropdown = ({ placeHolder, options, isMulti }) => {
   
     return (
       <div className="dropdown_container">
-        <div onMouseOver={handleInputClick} className="dropdown_input">
+        <div onClick={handleInputClick} className="dropdown_input">
            {showMenu && (
              <div className='dropdown_menu'>
                 {options.map((option) => (
