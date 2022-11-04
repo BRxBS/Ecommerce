@@ -9,7 +9,7 @@ export function HomePage() {
     <>
       <Header />
       <BarTwo />
-       <div className="container">
+       <div className="container_HomePage">
         <CardProduct />
       </div> 
 
