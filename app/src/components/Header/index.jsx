@@ -1,4 +1,4 @@
-import { ShoppingCart } from "phosphor-react";
+import { ShoppingCart, MagnifyingGlass, HeartStraight } from "phosphor-react";
 import Icon from "../Icon/Icon";
 import { Link } from "react-router-dom";
 import { TheModal } from "../Modal";
@@ -14,11 +14,28 @@ export function Header() {
         <Link to={"/"}>
           <Icon className="icon" />
         </Link>
+        
+
 
         <div className="wrapper_icons">
+        <div className = 'search-box'>
+      <input className = "search-text" type="text" placeholder = "Pesquise o produto"/>
+     <a href="#" className = "search-btn">
+      <i className="fas fa-search">
+         <MagnifyingGlass size={36}/>
+      </i>
+      </a>
+    
+       </div>
+
           <Link to={"/Cart"}>
             <ShoppingCart size={38} className=" ShoppingCart" />
           </Link>
+
+          <Link to={"/Cart"} >
+          <HeartStraight size={38} className='HeartStraight'/>
+          </Link>
+
           <TheModal />
         </div>
       </header>
