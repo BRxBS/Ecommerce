@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { BarTwo } from "../../components/BarTwo";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import './styles.scss'
 
 //http://localhost:8000/products/:product_id  link na api
 
@@ -35,27 +36,44 @@ export const SingleProduct = () => {
   return (
     <>
       <Header />
-      <BarTwo />
-      <div className="static">
-        <div className=" block md:flex m-8 h-[32rem]">
-          <div className="bg-gray-100 w-[100%] md:w-1/2 md:mx-28 rounded flex justify-center ">
-            <div className=" block md:flex ">
-              <img
-                className="h-[15rem] w-[30rem] md:h-96 md:w-96 m-auto border border-black"
-                src={product.productImage}
-                alt={product.productName}
+
+      <div className="main_container">
+        <div className="content_container">
+          <div className="img_wrapper">
+
+            <div className="first_container">
+            
+            <img 
+                src={product.productImage1}
+              />
+               <img 
+                src={product.productImage2}
               />
             </div>
+
+              <div className="second_container">
+              <img className="img_3"
+                src={product.productImage3}
+              />
+               <img className="img_4"
+                src={product.productImage4}
+              />
+                <img className="img_5"
+                src={product.productImage5}
+              />
+              </div>
+
+           
           </div>
           <div className="">
             <div className="">
-              <div className="border-8 mt-16 md:mt-0 border-black rounded mb-4 p-4">
-                <div className="text-4xl ">{product.productName}</div>
+              <div className="productName_wrapper">
+                <h2 >{product.productName}</h2>
               </div>
 
-              <div className=" block justify-between mx-2 my-4">
-                <div className="my-4 block items-center ">
-                  <h6 className="text-3xl">Price: ${product.productPrice}</h6>
+              <div className=" price_status_container">
+                <div className="productPrice_wrapper">
+                  <h6>Price: ${product.productPrice}</h6>
                 </div>
 
                 <div className=" my-4">
@@ -68,8 +86,8 @@ export const SingleProduct = () => {
                 </div>
                 {product.productQuantity > 0 ? (
                   <>
-                    <div className="static">
-                      <h6 className="text-3xl">Quantity</h6>
+                    <div >
+                      <h6 >Quantity</h6>
                       <select className="w-16 m-2 border-2 bg-gray-200 border-black ">
                         {[...Array(product.productQuantity).keys()].map((x) => (
                           <option key={x + 1} value={x + 1}>
@@ -78,7 +96,7 @@ export const SingleProduct = () => {
                         ))}
                       </select>
                     </div>
-                    <button className="w-28 p-2 ml-[5rem] md:mt-20 md:ml-[7rem] border-[0.25rem] border-black bg-black rounded text-white">
+                    <button className="card_button">
                       Add To Cart
                     </button>
                   </>
@@ -88,7 +106,7 @@ export const SingleProduct = () => {
           </div>
         </div>
 
-        {/* RATING */}
+        {/* RATING
         <div className="block">
           <div className="md:m-8 mt-64">
             <p className="p-8 text-2xl ">
@@ -154,8 +172,8 @@ export const SingleProduct = () => {
               </Message>
             </div>
           </div>
-        </div>
-      </div>
+        </div>*/}
+      </div> 
     </>
   );
 };
