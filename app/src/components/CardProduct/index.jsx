@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { HeartStraight } from "phosphor-react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./styles.scss";
@@ -34,7 +35,7 @@ export function CardProduct() {
                 
                   <img
                     className="img"
-                    src={product.productImage}
+                    src={product.productImage1}
                     alt={product.productName}
                   />
                
@@ -49,12 +50,16 @@ export function CardProduct() {
                     {product.productName}
                   </Link>
                 </p>
-
+                <div className="price_heart_wrapper">
                 <h3
                   className="price"
                 >
                   R${product.productPrice}
+
                 </h3>
+                <HeartStraight size={30} />
+                </div>
+  
               </div>
             </div>
           </div>
