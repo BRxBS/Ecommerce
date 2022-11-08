@@ -79,26 +79,3 @@
     width: 50%;
 
 }
-.searching_input{
-    height: 1rem;
-    width: 70%;
-    padding: 0.50rem;
-    border: 0.20rem solid black;
-    border-radius: 5px;
-    color: black;
-    &::placeholder{
-        color: black;
-    }
-    font-family: inherit;
-    font-weight: 400;
-    font-size: medium;
-    
-
-}
-.MagnifyingGlass{
-    color: white;
-    border: 0.20rem solid black;
-    border-radius: 5px;
-    width: 3rem;
-    background-color: black;
-}

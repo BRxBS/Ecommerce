@@ -15,16 +15,8 @@ export function BarTwo() {
              />   
 
       <div className="Wrapper">
-        <input
-          type="text"
-          placeholder="Procure seu produto"
-          className="searching_input"
-        />
 
-        <MagnifyingGlass
-          size={32}
-          className="MagnifyingGlass"
-        />
+      
       </div>
     </div>
   );
