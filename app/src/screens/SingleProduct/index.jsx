@@ -1,6 +1,5 @@
 import { Header } from "../../components/Header";
-import { Rating } from "../../components/Rating";
-import { Message } from "../../components/Error";
+import { HeartStraight } from "phosphor-react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { BarTwo } from "../../components/BarTwo";
@@ -65,44 +64,41 @@ export const SingleProduct = () => {
 
            
           </div>
-          <div className="">
-            <div className="">
+
+          <div className="name_price_continer">
+            
               <div className="productName_wrapper">
                 <h2 >{product.productName}</h2>
               </div>
 
-              <div className=" price_status_container">
+             
                 <div className="productPrice_wrapper">
-                  <h6>Price: ${product.productPrice}</h6>
+                  <h6>R${product.productPrice}</h6>
                 </div>
 
-                <div className=" my-4">
-                  <h6 className="text-3xl">Status</h6>
-                  {product.productQuantity > 0 ? (
-                    <span>In Stock</span>
-                  ) : (
-                    <span>unavailable</span>
-                  )}
+                <div className="buttons_wrapper">
+
+               
+                <div className="dropdown_container">
+                    Tamanhos 
                 </div>
-                {product.productQuantity > 0 ? (
-                  <>
-                    <div >
-                      <h6 >Quantity</h6>
-                      <select className="w-16 m-2 border-2 bg-gray-200 border-black ">
-                        {[...Array(product.productQuantity).keys()].map((x) => (
-                          <option key={x + 1} value={x + 1}>
-                            {x + 1}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <button className="card_button">
-                      Add To Cart
+                  <div className="wrapper_button">
+
+
+                <button className="card_button">
+                     Adicionar ao carrinho
                     </button>
-                  </>
-                ) : null}
-              </div>
-            </div>
+
+                <button className="favorite_button">
+                      Favoritar
+                      <HeartStraight size={30} />
+                </button>
+                  </div>
+                  </div>
+
+               
+              
+           
           </div>
         </div>
 
