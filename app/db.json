@@ -69,7 +69,15 @@
       "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1667948332/ecommerce/blusa/Web_capture_8-11-2022_195724_www.farfetch.com_ono4pg.jpg",
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1667948332/ecommerce/blusa/Web_capture_8-11-2022_195741_www.farfetch.com_kqt38c.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1667948332/ecommerce/blusa/Web_capture_8-11-2022_195758_www.farfetch.com_ajsnhi.jpg",
-      "productPrice": " 441"
+      "productPrice": " 441",
+      "productSize" : [
+
+        {"id": "P", "productSize": " P"},
+        {"id": "M", "productSize": " M"},
+        {"id": "G", "productSize": " G"},
+        {"id": "GG", "productSize": " GG"}
+    ]
+
     },
 
     {
