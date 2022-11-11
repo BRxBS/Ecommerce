@@ -15,9 +15,7 @@
   height:20rem;
   width: 15rem;
   margin: 1rem 1rem;
-  border: 1px;
   border-radius: 3px;
-  border-color: black;
   padding: 0.5rem;
   
 }
@@ -59,7 +57,6 @@
   display: block;
   align-items: center;
   flex-direction: row;
-  border: 0.25rem solid black;
   border-radius: 3px;
   margin: 1rem;
   position: relative;
@@ -93,7 +90,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 
     position: relative;
