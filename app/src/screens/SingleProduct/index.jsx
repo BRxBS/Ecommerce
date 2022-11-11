@@ -2,9 +2,9 @@ import { Header } from "../../components/Header";
 import { HeartStraight } from "phosphor-react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { BarTwo } from "../../components/BarTwo";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { SizeDropdown } from "./sizeDropdown";
 import './styles.scss'
 
 //http://localhost:8000/products/:product_id  link na api
@@ -29,8 +29,15 @@ export const SingleProduct = () => {
 
   if (!product) return null;
 
-  //product.find((p) => p._id === id);
-  // console.log(product);
+  const name = product?.productName;
+  console.log('name', name)
+
+  const options = [   
+   {"id": "P", "productSize": " P"},
+  {"id": "M", "productSize": " M"},
+  {"id": "G", "productSize": " G"},
+  {"id": "GG", "productSize": " GG"}]
+
 
   return (
     <>
@@ -43,22 +50,22 @@ export const SingleProduct = () => {
             <div className="first_container">
             
             <img 
-                src={product.productImage1}
+                src={product?.productImage1}
               />
                <img 
-                src={product.productImage2}
+                src={product?.productImage2}
               />
             </div>
 
               <div className="second_container">
               <img className="img_3"
-                src={product.productImage3}
+                src={product?.productImage3}
               />
                <img className="img_4"
-                src={product.productImage4}
+                src={product?.productImage4}
               />
                 <img className="img_5"
-                src={product.productImage5}
+                src={product?.productImage5}
               />
               </div>
 
@@ -68,19 +75,20 @@ export const SingleProduct = () => {
           <div className="name_price_continer">
             
               <div className="productName_wrapper">
-                <h2 >{product.productName}</h2>
+                <h2 >{product?.productName}</h2>
               </div>
 
              
                 <div className="productPrice_wrapper">
-                  <h6>R${product.productPrice}</h6>
+                  <h6>R${product?.productPrice}</h6>
                 </div>
 
-                <div className="buttons_wrapper">
+
+                <div className="wrapper">
 
                
-                <div className="dropdown_container">
-                    Tamanhos 
+                <div className="dropdown_size_container">
+                <SizeDropdown placeHolder='Tamanhos' options={options}/>
                 </div>
                   <div className="wrapper_button">
 
@@ -91,7 +99,7 @@ export const SingleProduct = () => {
 
                 <button className="favorite_button">
                       Favoritar
-                      <HeartStraight size={30} />
+                      <HeartStraight size={25}  className="fav_HeartStraight"/>
                 </button>
                   </div>
                   </div>
