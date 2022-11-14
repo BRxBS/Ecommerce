@@ -1,6 +1,11 @@
 .main_container{
-    display: block;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
 
+.first_container{
+    display: block;
 
 }
 
@@ -15,7 +20,7 @@
  
     justify-content: center;
 
-    .second_container{
+    .second_img_container{
       img{
         margin: 0.25rem;
       }
@@ -58,25 +63,27 @@
 
         .dropdown_size_container {
             text-align: left;
-            border: 1px solid #ccc;
+            border: 1px solid rgb(12, 12, 12);
             position: relative;
             border-radius: 5px;
-       
-              
+            cursor: pointer;
+           
 
           }
           
           .dropdown_size_input {
-            padding: 5px;
+            padding: 8px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             user-select: none;
+    
           }
           .dropdown_size_menu{
             position: absolute;
-            top: 2.70rem;
-            transform: translateX(-0px);
+            top: 3rem;
+            right: 0px;
+    
             width: 100%; 
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -111,6 +118,7 @@
         border-radius: 5px;
         background-color: black;
         color: white;
+        cursor: pointer;
     
     }
 
@@ -126,16 +134,109 @@
         border-radius: 5px;
         background-color: white;
         color: black;
+        cursor: pointer;
 
         .fav_HeartStraight{
             color: black;
-
+           
 
 
         }
     }
 }
 }
+}
+.second_container{
+position: relative;
+top: 35rem;
+left: 5rem;
+background-color: red;
+
+      .wrapper {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .tabs {
+        position: relative;
+        margin: 3rem 0;
+       
+        height: 14.75rem;
+      }
+      .tabs::before,
+      .tabs::after {
+        content: "";
+        display: table;
+      }
+      .tabs::after {
+        clear: both;
+      }
+      .tab {
+        float: left;
+      }
+      .tab-switch {
+        display: none;
+      }
+      .tab-label {
+        position: relative;
+        display: block;
+        line-height: 2.75em;
+        height: 3em;
+        padding: 0 1.618em;
+        background: #1abc9c;
+        border-right: 0.125rem solid #16a085;
+        color: #fff;
+        cursor: pointer;
+        top: 0;
+        transition: all 0.25s;
+      }
+      .tab-label:hover {
+        top: -0.25rem;
+        transition: top 0.25s;
+      }
+      .tab-content {
+        display: flex;
+        height: 12rem;
+        position: absolute;
+        z-index: 1;
+        top: 2.75em;
+        left: 0;
+        padding: 1.618rem;
+        background: #fff;
+        color: #2c3e50;
+        border-bottom: 0.25rem solid #bdc3c7;
+        opacity: 0;
+        transition: all 0.35s;
+
+        .first-box{
+            margin-right: 5rem;
+            ul{
+                background-color: none;
+    
+                li{
+                    background-color: white; 
+                }
+            }
+        }
+        .second-box{
+            margin-right: 5rem;
+        }
+
+      }
+      .tab-switch:checked + .tab-label {
+        background: #fff;
+        color: #2c3e50;
+        border-bottom: 0;
+        border-right: 0.125rem solid #fff;
+        transition: all 0.35s;
+        z-index: 1;
+        top: -0.0625rem;
+      }
+      .tab-switch:checked + label + .tab-content {
+        z-index: 2;
+        opacity: 1;
+        transition: all 0.35s;
+      }
+
 }
 
 

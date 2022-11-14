@@ -7,9 +7,6 @@ import axios from "axios";
 import { SizeDropdown } from "./sizeDropdown";
 import './styles.scss'
 
-//http://localhost:8000/products/:product_id  link na api
-
-//const url = `http://localhost:8000/products`;
 
 export const SingleProduct = () => {
   const [product, setProduct] = useState({});
@@ -40,14 +37,14 @@ export const SingleProduct = () => {
 
 
   return (
-    <>
+    <div className="main_container">
       <Header />
 
-      <div className="main_container">
+      <div className="first_container">
         <div className="content_container">
           <div className="img_wrapper">
 
-            <div className="first_container">
+            <div className="first_img_container">
             
             <img 
                 src={product?.productImage1}
@@ -57,7 +54,7 @@ export const SingleProduct = () => {
               />
             </div>
 
-              <div className="second_container">
+              <div className="second_img_container">
               <img className="img_3"
                 src={product?.productImage3}
               />
@@ -109,75 +106,79 @@ export const SingleProduct = () => {
            
           </div>
         </div>
+      </div>
 
-        {/* RATING
-        <div className="block">
-          <div className="md:m-8 mt-64">
-            <p className="p-8 text-2xl ">
-              <strong className="text-3xl">Discripton</strong> <br />
-              {product.productDescription}
-            </p>
-            <br />
-            <div className="p-8 text-2xl ">
-              <h6 className="font-bold text-3xl">REVIEWS</h6>
-              <Message>No Reviews</Message>
-            </div>
-            <div className="p-8 text-2xl ">
-              <strong className="text-3xl">Admin Doe</strong>
-              <Rating />
-              <span>Jan 12 2021</span>
-              <div className=" mt-3">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div className="m-8 p-8 text-2xl ">
-            <h6 className="font-bold text-2xl">WRITE A CUSTOMER REVIEW</h6>
-            <div className="my-4"></div>
+      <div className="second_container">
 
-            <form>
-              <div className="my-4">
-                <strong>Rating </strong>
-                <select className=" border-2 bg-gray-200 border-gray-500">
-                  <option value="">Select...</option>
-                  <option value="1">1 - Poor</option>
-                  <option value="2">2 - Fair</option>
-                  <option value="3">3 - Good</option>
-                  <option value="4">4 - Very Good</option>
-                  <option value="5">5 - Excellent</option>
-                </select>
-              </div>
-              <div className="my-4">
-                <strong>Comment</strong>
-                <br />
-                <textarea
-                  rows="4"
-                  cols="50"
-                  className="w-52 md:w-0 border-2 bg-gray-200 border-gray-500"
-                ></textarea>
-              </div>
-              <div className="my-3">
-                <button className=" bg-black border-0 p-3 rounded text-white">
-                  SUBMIT
-                </button>
-              </div>
-            </form>
-            <div className="my-3">
-              <Message variant={"alert-warning"}>
-                Please{" "}
-                <Link to="/login">
-                  " <strong>Login</strong> "
-                </Link>{" "}
-                to write a review{" "}
-              </Message>
-            </div>
-          </div>
-        </div>*/}
-      </div> 
-    </>
+      <div className="wrapper">
+  <div className="tabs">
+    <div className="tab">
+      <input type="radio" name="css-tabs" id="tab-1" checked className="tab-switch" />
+
+      <label for="tab-1" className="tab-label">OS DETALHES</label>
+       <div className="tab-content">
+
+        <div className="first-box">
+          <span>
+            <h3>Amapô</h3>
+            <p>Jaqueta jeans cropped Thais</p>
+          </span>
+
+          <span>
+          <h4>Destaques</h4>
+              <ul>
+                <li>delavê</li>
+                <li>gola colarinho</li>
+                <li>mangas longas</li>
+                <li>vista com abotoamento frontal</li>
+                <li>dois bolsos frontais</li>
+                <li>detalhe de recorte</li>
+              </ul>
+          </span>
+        </div>
+        <div className="second-box">
+          <span>
+            <h4>Composição</h4>
+            <p>algodão</p>
+          </span>
+
+          <span>
+            <h4>Instruções de lavagem</h4>
+            <p>Lavar na máquina</p>
+          </span>
+
+          <span>
+            <h4>IDs do produto</h4>
+            <p>ID da marca: AMAI21002</p>
+          </span>
+          
+        </div>
+        <div className="third-box">
+        <img 
+                src={product?.productImage2}
+              />
+        </div>
+       </div>
+    </div>
+    
+    <div className="tab">
+      <input type="radio" name="css-tabs" id="tab-2" className="tab-switch" />
+      <label for="tab-2" className="tab-label">Tab Two</label>
+      <div className="tab-content">My father now and then sending me small sums of money, I laid them out in learning navigation, and other parts of the mathematics, useful to those who intend to travel, as I always believed it would be, some time or other, my fortune to do. </div>
+    </div>
+    <div className="tab">
+      <input type="radio" name="css-tabs" id="tab-3" className="tab-switch" />
+      <label for="tab-3" className="tab-label">Tab Three</label>
+      <div className="tab-content">When I left Mr. Bates, I went down to my father: where, by the assistance of him and my uncle John, and some other relations, I got forty pounds, and a promise of thirty pounds a year to maintain me at Leyden: there I studied physic two years and seven months, knowing it would be useful in long voyages.</div>
+    </div>
+  </div>
+
+</div>
+
+
+      </div>
+      
+   
+    </div>
   );
 };
