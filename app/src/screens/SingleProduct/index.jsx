@@ -126,7 +126,7 @@ export const SingleProduct = () => {
 
           <span>
           <h4>Destaques</h4>
-              <ul>
+              <ul className="destaques_ul" >
                 <li>delavê</li>
                 <li>gola colarinho</li>
                 <li>mangas longas</li>
@@ -163,14 +163,70 @@ export const SingleProduct = () => {
     
     <div className="tab">
       <input type="radio" name="css-tabs" id="tab-2" className="tab-switch" />
-      <label for="tab-2" className="tab-label">Tab Two</label>
-      <div className="tab-content">My father now and then sending me small sums of money, I laid them out in learning navigation, and other parts of the mathematics, useful to those who intend to travel, as I always believed it would be, some time or other, my fortune to do. </div>
+      <label for="tab-2" className="tab-label">TAMANHOS & MEDIDAS</label>
+        <div className="tab-content">
+          <div className="first-box">
+    
+          <span>
+          <h4>Informações sobre tamanhos</h4>
+              <ul className="Informações_ul" >
+                <li>Essa peça possui numeração correspondente ao seu tamanho real. Recomendamos a compra de seu tamanho regular</li>
+                <li>Possui modelagem slim</li>
+                <li>Feito com um tecido de peso mediano sem stretch</li>
+              </ul>
+          </span>
+
+          <span>
+          <h4>Informações sobre tamanhos</h4>
+          <table>
+            <tr>
+              <td>Altura</td>
+              <td>0,01 m</td>
+            </tr>
+            <tr>
+              <td>Busto/peito</td>
+              <td>81 cm</td>
+            </tr>
+            <tr>
+              <td>Quadril</td>
+              <td>93 cm</td>
+            </tr>
+            <tr>
+              <td>Cintura</td>
+              <td>61 cm</td>
+            </tr>
+          </table>
+
+          <p>O(a) modelo mede 0,01 m e está usando tamanho P (BR).</p>
+
+          </span>
+
+        </div>
+        <div className="second-box">
+          <span>
+            <h4>Composição</h4>
+            <p>algodão</p>
+          </span>
+
+          <span>
+            <h4>Instruções de lavagem</h4>
+            <p>Lavar na máquina</p>
+          </span>
+
+          <span>
+            <h4>IDs do produto</h4>
+            <p>ID da marca: AMAI21002</p>
+          </span>
+          
+        </div>
+        <div className="third-box">
+        <img 
+                src={product?.productImage2}
+              />
+        </div>
+        </div>
     </div>
-    <div className="tab">
-      <input type="radio" name="css-tabs" id="tab-3" className="tab-switch" />
-      <label for="tab-3" className="tab-label">Tab Three</label>
-      <div className="tab-content">When I left Mr. Bates, I went down to my father: where, by the assistance of him and my uncle John, and some other relations, I got forty pounds, and a promise of thirty pounds a year to maintain me at Leyden: there I studied physic two years and seven months, knowing it would be useful in long voyages.</div>
-    </div>
+  
   </div>
 
 </div>
