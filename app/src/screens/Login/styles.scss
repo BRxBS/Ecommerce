@@ -1,0 +1,78 @@
+.loging_conatiner{
+    display: flex;
+
+
+}
+.form_login{
+    display: block;
+    height: 27rem;
+    padding: 2rem;
+    margin: auto;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    label{
+        font-size: medium;
+        margin-bottom: 1rem;
+    }
+    .email_pass{
+        width: 90%;
+        padding: 0.50rem;
+        margin-bottom: 1rem;
+        font-size: medium;
+    }
+
+.options_wrapper{
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+font-size: small;
+input{
+    font-size: small;
+    margin-right: 0.25rem;
+    cursor: pointer;
+}
+ label{
+    font-size: small;
+ }
+
+ a{
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+
+    &:hover{
+        text-decoration: underline;
+    }
+ }
+
+
+}
+
+button{
+    position: relative;
+    top: 3rem;
+    left: 3rem;
+    width: 10rem;
+    padding: 0.50rem;
+    color: white;
+    background-color: black;
+    border: 5px solid black;
+    border-radius: 3px;
+    font-size: large;
+}
+
+}
+
+.register{
+    display: flex;
+    position: relative;
+    top: 6rem;
+  .link{
+    text-decoration: none;
+    color: rgb(77, 65, 65);
+    &:hover{
+        text-decoration: underline;
+    }
+  }
+
+}
