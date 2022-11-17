@@ -45,7 +45,7 @@ export function TheModal() {
           >
             {ModalData.map((item) => {
               return (
-                <ul className="">
+                <ul className="modal_ul">
                   <li
                     key={item.id}
                     
