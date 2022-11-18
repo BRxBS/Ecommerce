@@ -1,14 +1,19 @@
 .loging_conatiner{
     display: flex;
 
+    img{
+        height: 43.2rem;
+        overflow-y: hidden;
+    }
 
 }
 .form_login{
     display: block;
     height: 27rem;
+    width: 16rem;
     padding: 2rem;
     margin: auto;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     label{
@@ -30,6 +35,7 @@ font-size: small;
 input{
     font-size: small;
     margin-right: 0.25rem;
+    border-radius: 5px;
     cursor: pointer;
 }
  label{
@@ -67,6 +73,7 @@ button{
     display: flex;
     position: relative;
     top: 6rem;
+    left: 1rem;
   .link{
     text-decoration: none;
     color: rgb(77, 65, 65);

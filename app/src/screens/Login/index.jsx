@@ -23,12 +23,12 @@ export function Login() {
             placeholder="Email"
           /> 
           <br />
-          <label>Password</label>
+          <label>Senha</label>
           <br />
           <input
             className="email_pass"
             type="password"
-            placeholder="Password"
+            placeholder="Senha"
           /> 
           <br />
           <div className="options_wrapper">
@@ -39,25 +39,25 @@ export function Login() {
           
               />
               <label htmlFor="logCheck" className="text-sm cursor-pointer ">
-                Remember Me
+               Lembre-me
               </label>
             </div>
             <a href="#">
-              Forgot Password?
+              Esqueceu a senha?
             </a>
           </div>
           <br />
           <button
             type="submit"
           >
-            Login
+            Entrar
           </button>
           <br />
           <div className="register">
             <span>
-              Not a Member? {" "}
+              Não é membro? {" "}
               <Link className="link" to={"/register"}>
-                Create Account
+                Criar conta.
               </Link>
             </span>
           </div>
