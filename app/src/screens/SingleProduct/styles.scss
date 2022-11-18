@@ -228,7 +228,7 @@ padding: 10rem;
         z-index: 1;
         top: -0.0625rem;
       }
-      .tab-switch:checked +label + .tab-content {
+      .tab-switch:checked + label + .tab-content {
         z-index: 2;
         opacity: 1;
         transition: all 0.35s;
