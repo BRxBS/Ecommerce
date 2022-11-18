@@ -4,6 +4,8 @@ import { Header } from "../../components/Header";
 import { CheckCircle, Info, XCircle } from "phosphor-react";
 import { Login } from "../Login";
 import axios from "axios";
+import './styles.scss'
+import subscribe from './inscreva-se.png'
 
 const USER_REGEX = /^[a-zA-Z][a-zA-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -120,7 +122,8 @@ export function Register() {
           <Login />
         </p>
       ) : (
-        <div className="block relative w-[28rem] max-h-[40rem] h-[38rem] m-auto mt-2 border-8 border-black p-2 text-2xl rounded">
+        <div className="main_container_register">
+          <img src={subscribe} alt="alt" />
           <p
             ref={errRef}
             className={errMsg ? "border border-black" : "hidden"}
@@ -129,18 +132,21 @@ export function Register() {
             {errMsg}
           </p>
 
-          <p className="text-4xl font-bold m-2">Login</p>
-          <hr />
-          <form onSubmit={handleSubmit} className="h-[23rem] p-10 ">
-            <label htmlFor="name" className="flex items-center ">
+          
+       
+          <form onSubmit={handleSubmit} className="form_register">
+           <h2>Inscreva-se</h2>
+
+            <label htmlFor="name" className="label_name_email_pass">
               Name
               <span className={validName ? "" : "hidden"}>
-                <CheckCircle size={20} className="m-1 mt-2" />
+                <CheckCircle size={20} className="circles" />
               </span>
               <span className={validName || !user ? "hidden" : ""}>
-                <XCircle size={20} className="m-1 mt-2" />
+                <XCircle size={20} className="circles" />
               </span>
             </label>
+            
             <input
               type="text"
               className="border-2 border-black p-1 w-[100%] mb-1"
@@ -155,6 +161,7 @@ export function Register() {
               onFocus={() => setUserFocus(true)}
               onBlur={() => setUserFocus(false)}
             />
+            
             <p
               id="uidnote"
               className={
@@ -168,16 +175,18 @@ export function Register() {
               Must begin with a letter. <br />
               Letters, numbers, underscores, hyphen allowed.
             </p>
+           
 
-            <label htmlFor="email" className="flex">
+            <label htmlFor="email" className="label_name_email_pass">
               Email
               <span className={validEmail ? "" : "hidden"}>
-                <CheckCircle size={20} className="m-1 mt-2" />
+                <CheckCircle size={20} className="circles" />
               </span>
               <span className={validEmail || !email ? "hidden" : ""}>
-                <XCircle size={20} className="m-1 mt-2" />
+                <XCircle size={20} className="circles" />
               </span>
             </label>
+          
             <input
               type="email"
               className="border-2 border-black p-1 w-[100%]  mb-1"
@@ -190,6 +199,7 @@ export function Register() {
               onFocus={() => setEmailFocus(true)}
               onBlur={() => setEmailFocus(false)}
             />
+           
             <p
               id="uidnoteEmail"
               className={
@@ -202,16 +212,18 @@ export function Register() {
               Must have @. <br />
               Letters, numbers, underscores, hyphen allowed.
             </p>
+            
 
-            <label htmlFor="password" className="flex">
+            <label htmlFor="password" className="label_name_email_pass">
               Create Password
               <span className={validPwd ? "" : "hidden"}>
-                <CheckCircle size={20} className="m-1 mt-2" />
+                <CheckCircle size={20} className="circles" />
               </span>
               <span className={validPwd || !pwd ? "hidden" : ""}>
-                <XCircle size={20} className="m-1 mt-2" />
+                <XCircle size={20} className="circles" />
               </span>
             </label>
+            
             <input
               type="password"
               className="border-2 border-black p-1 w-[100%]  mb-1"
@@ -224,6 +236,7 @@ export function Register() {
               onFocus={() => setPwdFocus(true)}
               onBlur={() => setPwdFocus(false)}
             />
+           
             <p
               id="pwdnote"
               className={
@@ -244,16 +257,18 @@ export function Register() {
               <span aria-label="dollar sign">$</span>
               <span aria-label="percent">%</span>
             </p>
+            
 
-            <label htmlFor="confirm_pwd" className="flex">
-              Email
+            <label htmlFor="confirm_pwd" className="label_name_email_pass">
+              Confirme senha
               <span className={validMatch && matchPwd ? "" : "hidden"}>
-                <CheckCircle size={20} className="m-1 mt-2" />
+                <CheckCircle size={20} className="circles" />
               </span>
               <span className={validMatch || !matchPwd ? "hidden" : ""}>
-                <XCircle size={20} className="m-1 mt-2" />
+                <XCircle size={20} className="circles" />
               </span>
             </label>
+           
             <input
               type="password"
               className="border-2 border-black p-1 w-[100%]  mb-1"
@@ -266,6 +281,7 @@ export function Register() {
               onFocus={() => setMatchFocus(true)}
               onBlur={() => setMatchFocus(false)}
             />
+           
             <p
               id="confirmnote"
               className={
@@ -274,9 +290,11 @@ export function Register() {
                   : "hidden"
               }
             >
+              <br />
               <Info size={16} className="m-[0.15rem]" /> Must match the first
               password input filed.
             </p>
+            <br />
 
             <button
               disabled={
@@ -289,12 +307,13 @@ export function Register() {
             >
               Register
             </button>
-          </form>
-          <p className="absolute bottom-3 right-5">
+            <p className="absolute bottom-3 right-5">
             <Link to={"/login"}>
               I Have Account <strong className="underline">Login</strong>
             </Link>
           </p>
+          </form>
+
         </div>
       )}
     </>

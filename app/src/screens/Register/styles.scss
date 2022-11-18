@@ -1,0 +1,38 @@
+.main_container_register{
+    display: flex;
+
+
+}
+.form_register{
+    display: block;
+    height: 35rem;
+    width: 20rem;
+    margin: auto;
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+    .hidden{
+        display: none;
+    }
+    .label_name_email_pass{
+ 
+        display: flex;
+        align-items: center;
+        margin: 0.25rem;
+        padding: 0.25rem;
+        font-size: medium;
+        .circles{
+            margin: 0.25rem;
+            margin-top: 0.50rem;
+        }
+    }
+
+    input{
+        font-size: medium;
+        height: 1rem;
+        width: 100%;
+        padding: 0.50rem;
+        margin-bottom: 0.50rem;
+    }
+}
