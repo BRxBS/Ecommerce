@@ -20,48 +20,111 @@
   "products": [
     {
       "id" : 1,
-      "category_id": 1,
-      "productName": "Black shoes",
-      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657194562/ecommerce/Captura_da_Web_7-7-2022_84324_i.shafacdn.net_a1bvav.jpg",
-      "productPrice": "100"
+      "category_id": "shoes",
+      "productName": "Ankle boot de couro com cinto",
+      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146518/ecommerce/sapatos/1_tljgrw.jpg",
+      "productImage2": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146517/ecommerce/sapatos/2_uvje8p.jpg",
+      "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146517/ecommerce/sapatos/3_jz5x4a.jpg",
+      "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146517/ecommerce/sapatos/4_ak7e8z.jpg",
+      "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146517/ecommerce/sapatos/5_wmq8kj.jpg",
+      "productPrice": " 7.040",
+      "productDiscription" : "A ankle boot em couro preto brilhante é projetada com uma sola robusta e recortes elásticos em cada lado para uma entrada de pull-on. Concluído com uma alça removível no tornozelo pontilhada por cristais brilhantes envoltos em guarnições gravadas, assemelhando-se a jóias vintage. Possui o emblemático Duplo G enriquecendo a frente.",
+      "PoductDetails": {
+        "first": "Preta",
+        "second": "couro",
+        "third": "salto de 7 cm",
+        "fouth": "plataforma de 2 cm",
+        "fifth": "",
+        "sixth": ""
+  
+      }
     },
     {
       "id" : 2,
-      "category_id": 1,
-      "productName": "Sapatos Brancos",
-      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657194586/ecommerce/Captura_da_Web_7-7-2022_8468_shopee.com.br_ajclma.jpg",
-      "productPrice": "80"
+      "category_id": "shoes",
+      "productName": "Scarpin Rockstud de couro",
+      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146878/ecommerce/sapatos/3_xmebws.jpg",
+      "productImage2": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146879/ecommerce/sapatos/4_zgae82.jpg",
+      "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146878/ecommerce/sapatos/1_yn5m00.jpg",
+      "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146879/ecommerce/sapatos/4_zgae82.jpg",
+      "productImage5": "",
+      "productPrice": "6.200",
+      "productDiscription" : "Fechamento por tira com fivela no tornozelo, aplicação de tachas Rockstud douradas, bico fino e salto agulha. Material: couro. Produzido em: Itália",
+      "PoductDetails": {
+        "first": "",
+        "second": "",
+        "third": "",
+        "fouth": "",
+        "fifth": "",
+        "sixth": ""
+  
+      }
     },
     {
       "id" : 3,
-      "category_id": 1,
-      "productName": "Sapatos Brilhantes",
-      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657194574/ecommerce/Captura_da_Web_7-7-2022_84816_www.americanas.com.br_ucfusr.jpg",
-      "productPrice": "130"
+      "category_id": "shoes",
+      "productName": "Sandália Vanessa com detalhe de borboleta",
+      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147386/ecommerce/sapatos/1_jbvefe.jpg",
+      "productImage2": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147386/ecommerce/sapatos/2_fgtqqf.jpg",
+      "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147386/ecommerce/sapatos/3_jigqew.jpg",
+      "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147386/ecommerce/sapatos/4_nyr6ky.jpg",
+      "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147386/ecommerce/sapatos/5_tl1itz.jpg",
+      "productPrice": " 4.713",
+      "productDiscription" : "Dourado, couro, detalhe de borboleta exclusivo, peep toe, fechamento por amarração no tornozelo e salto agulha alto.",
+      "PoductDetails": {
+        "first": "",
+        "second": "",
+        "third": "",
+        "fouth": "",
+        "fifth": "",
+        "sixth": ""
+  
+      }
     },
     {
       "id" : 4,
-      "category_id": 2,
-      "productName": "Blusa Coruja",
-      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657195455/ecommerce/blusa/D_NQ_NP_653407-MLB31193549046_062019-W_zuirsz.jpg",
-      "productPrice": "50"
+      "category_id": "shirt",
+      "productName": "Blusa mangas curtas com discos metálicos",
+      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147880/ecommerce/blusa/1_qgae7g.jpg",
+      "productImage2": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147881/ecommerce/blusa/2_wjdyxt.jpg",
+      "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147880/ecommerce/blusa/3_bpo12s.jpg",
+      "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147880/ecommerce/blusa/4_mj6xqg.jpg",
+      "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147880/ecommerce/blusa/5_ug9w2u.jpg",
+      "productPrice":  "11.735",
+      "productDiscription" : "Prateado, detalhe de paetês, efeito cota de malha, gola redonda, mangas curtas e barra assimétrica.",
+      "PoductDetails": {
+        "first": "",
+        "second": "",
+        "third": "",
+        "fouth": "",
+        "fifth": "",
+        "sixth": ""
+  
+      }
     },
     {
       "id" : 5,
-      "category_id": 2,
-      "productName": "Blusa Lobos",
-      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657195454/ecommerce/blusa/camiseta-lobo-ying-yang-estampa-total-lobo_blgs2j.jpg",
-      "productPrice": "70"
+      "category_id": "shirt",
+      "productName": "Camisa cropped mangas longas",
+      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/1_pwerho.jpg",
+      "productImage2": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/2_c4geuw.jpg",
+      "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/3_a7mng1.jpg",
+      "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/4_o1v232.jpg",
+      "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/5_ulyxbg.jpg",
+      "productPrice":  "780",
+      "productDiscription" : "Camisa cropped mangas longas branca Amir Slama. Com mangas longas com punho, estampa corrida e amarração frontal.",
+      "PoductDetails": {
+        "first": "",
+        "second": "",
+        "third": "",
+        "fouth": "",
+        "fifth": "",
+        "sixth": ""
+  
+      }
     },
     {
       "id" : 6,
-      "category_id": 2,
-      "productName": "Blusa Simpsons",
-      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1657195455/ecommerce/blusa/camiseta-serie-the-simpsons-estampa-total-the-simpsons_rrkx6r.jpg",
-      "productPrice": "50"
-    },
-    {
-      "id" : 7,
       "category_id": 2,
       "productName": "Jaqueta jeans cropped Thais",
       "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1667947965/ecommerce/blusa/Web_capture_8-11-2022_195217_www.farfetch.com_wzaoz8.jpg",
@@ -76,30 +139,83 @@
         {"id": "M", "productSize": " M"},
         {"id": "G", "productSize": " G"},
         {"id": "GG", "productSize": " GG"}
-    ]
+    ],
+    "PoductDetails": {
+      "first": "delavê",
+      "second": "gola colarinho",
+      "third": "mangas longas",
+      "fouth": "vista com abotoamento frontal",
+      "fifth": "dois bolsos frontais",
+      "sixth": "detalhe de recorte"
+
+    }
+  
 
     },
 
     {
+      "id" : 7,
+      "category_id": "bottom",
+      "productName": "Short jeans desfiado",
+      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/1_pwerho.jpg",
+      "productImage2": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148980/ecommerce/blusa/2_to4z1v.jpg",
+      "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148980/ecommerce/blusa/3_nsxcqw.jpg",
+      "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148980/ecommerce/blusa/4_l2qphm.jpg",
+      "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148980/ecommerce/blusa/5_uciuvn.jpg",
+      "productPrice":  "1.376",
+      "productDiscription" : "Armani Exchange",
+      "PoductDetails": {
+        "first": "azul",
+        "second": "cintura média",
+        "third": "passantes no cós",
+        "fouth": "fechamento por botão e zíper",
+        "fifth": "cinco bolsos",
+        "sixth": "acabamento desfiado"
+  
+      }
+    },
+    {
       "id" : 8,
-      "category_id": 3,
-      "productName": "Calça skiny",
-      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1666880816/ecommerce/cal%C3%A7as/cal%C3%A7a_3_kwskdk.jpg",
-      "productPrice": "100"
+      "category_id": "bottom",
+      "productName": "Saia metálica cintura alta",
+      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150271/ecommerce/blusa/1_xyfy6l.jpg",
+      "productImage2": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150271/ecommerce/blusa/2_xylobv.jpg",
+      "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150270/ecommerce/blusa/3_gzlwuw.jpg",
+      "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150270/ecommerce/blusa/4_xxohns.jpg",
+      "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150270/ecommerce/blusa/5_tam6a6.jpg",
+      "productPrice":  "3.180",
+      "productDiscription" : "Patch de logo posterior, cintura alta, passantes para cinto, cinco bolsos e acinturado.",
+      "PoductDetails": {
+        "first": "",
+        "second": "",
+        "third": "",
+        "fouth": "",
+        "fifth": "",
+        "sixth": ""
+
+    }
+    
     },
     {
       "id" : 9,
-      "category_id": 3,
-      "productName": "Calça cintura alta",
-      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1666880816/ecommerce/cal%C3%A7as/cal%C3%A7a_2_dnmhet.jpg",
-      "productPrice": "120"
-    },
-    {
-      "id" : 10,
-      "category_id": 3,
-      "productName": "Calça folgada",
-      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1666880816/ecommerce/cal%C3%A7as/cal%C3%A7a_1_rolbpw.jpg",
-      "productPrice": "120"
+      "category_id": "bottom",
+      "productName": "Minissaia de renda",
+      "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150745/ecommerce/blusa/1_kfbbsl.jpg",
+      "productImage2": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150745/ecommerce/blusa/2_gr4i29.jpg",
+      "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150745/ecommerce/blusa/3_u0pfsn.jpg",
+      "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150745/ecommerce/blusa/4_ok39hu.jpg",
+      "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150745/ecommerce/blusa/5_tkvxiq.jpg",
+      "productPrice":  "6.800",
+      "productDiscription" : "Cintura alta, concealed rear zip fastening e bainha ondulada.",
+      "PoductDetails": {
+        "first": "",
+        "second": "",
+        "third": "",
+        "fouth": "",
+        "fifth": "",
+        "sixth": ""
+
+    }
     }
   ],
 
