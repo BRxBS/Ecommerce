@@ -138,7 +138,7 @@ export function Register() {
            <h2>Inscreva-se</h2>
 
             <label htmlFor="name" className="label_name_email_pass">
-              Name
+              Nome
               <span className={validName ? "" : "hidden"}>
                 <CheckCircle size={20} className="circles" />
               </span>
@@ -153,7 +153,7 @@ export function Register() {
               id="name"
               ref={userRef}
               autoComplete="off"
-              placeholder="Username"
+              placeholder="Nome do Usuario"
               onChange={(e) => setUser(e.target.value)}
               required
               aria-invalid={validName ? "false" : "true"}
@@ -166,14 +166,14 @@ export function Register() {
               id="uidnote"
               className={
                 userFocus && user && !validName
-                  ? "flex p-1 text-white bg-gray-600 text-sm rounded-md"
+                  ? "attention_messege"
                   : "hidden"
               }
             >
-              <Info size={16} className="m-[0.15rem]" /> 4 to 24 characters.{" "}
+              <Info size={16} className="info" /> 4 a 24 caracteres.{" "}
               <br />
-              Must begin with a letter. <br />
-              Letters, numbers, underscores, hyphen allowed.
+              Tem que começar com uma letra. <br />
+              Letras, numero, sublinhada, hífen permitidos.
             </p>
            
 
@@ -204,23 +204,23 @@ export function Register() {
               id="uidnoteEmail"
               className={
                 emailFocus && email && !validEmail
-                  ? "flex p-1 text-white bg-gray-600 text-sm rounded-md"
+                  ? "attention_messege"
                   : "hidden"
               }
             >
-              <Info size={16} className="m-[0.15rem]" />
-              Must have @. <br />
-              Letters, numbers, underscores, hyphen allowed.
+              <Info size={16} className="info" />
+              Precisa conter @. <br />
+              Letras, numero, sublinhada, hífen permitidos.
             </p>
             
 
             <label htmlFor="password" className="label_name_email_pass">
-              Create Password
+              Criar senha
               <span className={validPwd ? "" : "hidden"}>
-                <CheckCircle size={20} className="circles" />
+                <CheckCircle size={16} className="circles" />
               </span>
               <span className={validPwd || !pwd ? "hidden" : ""}>
-                <XCircle size={20} className="circles" />
+                <XCircle size={16} className="circles" />
               </span>
             </label>
             
@@ -228,7 +228,7 @@ export function Register() {
               type="password"
               className="border-2 border-black p-1 w-[100%]  mb-1"
               id="password"
-              placeholder="Password"
+              placeholder="Senha"
               onChange={(e) => setPwd(e.target.value)}
               required
               aria-invalid={validPwd ? "false" : "true"}
@@ -241,16 +241,15 @@ export function Register() {
               id="pwdnote"
               className={
                 PwdFocus && pwd && !validPwd
-                  ? "flex p-1 text-white bg-gray-600 text-sm rounded-md"
+                  ? "attention_messege_pass"
                   : "hidden"
               }
             >
-              <Info size={16} className="m-[0.15rem]" />
-              8 to 24 characters.
+              <Info size={16} className="info" />
+              8 to 24 caracteres.
               <br />
-              Must include uppercase and lowercase, a number and a special
-              character. <br />
-              Allowes special characters:
+              Precisar conter letra maiuscula e minuscula, um numero e um caracter especial. <br />
+              Permitir caracteres especiais: {" "}
               <span aria-label="exclamation marks">!</span>
               <span aria-label="at symbol">@</span>
               <span aria-label="hastag">#</span>
@@ -273,7 +272,7 @@ export function Register() {
               type="password"
               className="border-2 border-black p-1 w-[100%]  mb-1"
               id="confirm_pwd"
-              placeholder="Confirm Password"
+              placeholder="Confirmar senha"
               onChange={(e) => setMatchPwd(e.target.value)}
               required
               aria-invalid={validMatch ? "false" : "true"}
@@ -286,13 +285,12 @@ export function Register() {
               id="confirmnote"
               className={
                 matchFocus && !validMatch
-                  ? "flex p-1 text-white bg-gray-600 text-sm rounded-md"
+                  ? "attention_messege"
                   : "hidden"
               }
             >
               <br />
-              <Info size={16} className="m-[0.15rem]" /> Must match the first
-              password input filed.
+              <Info size={16} className="info" /> As senhas devem ser as mesmas.
             </p>
             <br />
 
@@ -302,14 +300,13 @@ export function Register() {
                   ? true
                   : false
               }
-              className="border relative top-5 left-24 w-32 h-10 border-black bg-black rounded text-white "
               type="submit"
             >
-              Register
+              Registrar
             </button>
-            <p className="absolute bottom-3 right-5">
-            <Link to={"/login"}>
-              I Have Account <strong className="underline">Login</strong>
+            <p className="register">
+            <Link to={"/login"} className='link'>
+              Tenho uma conta: <strong>Login.</strong>
             </Link>
           </p>
           </form>
