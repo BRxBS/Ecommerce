@@ -41,20 +41,18 @@ export const SingleProduct = () => {
       <Header />
 
       <div className="first_container">
-        <div className="content_container">
+    
           <div className="img_wrapper">
 
-            <div className="first_img_container">
+           
             
-            <img 
+            <img className="img_1"
                 src={product?.productImage1}
               />
-               <img 
+               <img className="img_2"
                 src={product?.productImage2}
               />
-            </div>
-
-              <div className="second_img_container">
+            
               <img className="img_3"
                 src={product?.productImage3}
               />
@@ -64,7 +62,7 @@ export const SingleProduct = () => {
                 <img className="img_5"
                 src={product?.productImage5}
               />
-              </div>
+           
 
            
           </div>
@@ -98,7 +96,7 @@ export const SingleProduct = () => {
                       Favoritar
                       <HeartStraight size={25}  className="fav_HeartStraight"/>
                 </button>
-                  </div>
+                  
                   </div>
 
                
