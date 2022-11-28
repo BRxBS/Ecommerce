@@ -4,14 +4,13 @@ import { CardProduct } from "../../components/CardProduct";
 import "./styles.scss";
 
 export function HomePage() {
-  window.scrollTo(0, 0);
   return (
-    <>
+    <div className="homePage_wrapper">
       <Header />
       <BarTwo />
        <div className="container_HomePage">
         <CardProduct />
       </div>
-    </>
+    </div>
   );
 }
