@@ -31,6 +31,7 @@ export function CardProduct() {
             key={product.id}
           >
             <div className="content_wrapper">
+              <div  className="img_container">
               <Link to={`/products/${product.id}`}>
                 
                   <img
@@ -38,8 +39,13 @@ export function CardProduct() {
                     src={product.productImage1}
                     alt={product.productName}
                   />
+                                
+                  <img   className="img_overlay" 
+                    src={product.productImage2}
+                    alt={product.productName} />
                
               </Link>
+              </div>
 
               <div className="name_price_wraper">
                 <p>
