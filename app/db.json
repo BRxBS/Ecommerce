@@ -29,15 +29,16 @@
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146517/ecommerce/sapatos/5_wmq8kj.jpg",
       "productPrice": " 7.040",
       "productDiscription" : "A ankle boot em couro preto brilhante é projetada com uma sola robusta e recortes elásticos em cada lado para uma entrada de pull-on. Concluído com uma alça removível no tornozelo pontilhada por cristais brilhantes envoltos em guarnições gravadas, assemelhando-se a jóias vintage. Possui o emblemático Duplo G enriquecendo a frente.",
-      "PoductDetails": {
-        "first": "Preta",
-        "second": "couro",
-        "third": "salto de 7 cm",
-        "fouth": "plataforma de 2 cm",
-        "fifth": "",
-        "sixth": ""
+      "PoductDetails": [
+      {        
+      "first": "Preta",
+      "second": "couro",
+      "third": "salto de 7 cm",
+      "fouth": "plataforma de 2 cm",
+      "fifth": "",
+      "sixth": ""}
   
-      }
+      ]
     },
     {
       "id" : 2,
@@ -50,15 +51,15 @@
       "productImage5": "",
       "productPrice": "6.200",
       "productDiscription" : "Fechamento por tira com fivela no tornozelo, aplicação de tachas Rockstud douradas, bico fino e salto agulha. Material: couro. Produzido em: Itália",
-      "PoductDetails": {
-        "first": "",
-        "second": "",
-        "third": "",
-        "fouth": "",
-        "fifth": "",
-        "sixth": ""
+      "PoductDetails": [
+         "",
+         "",
+         "",
+         "",
+         "",
+         ""
   
-      }
+      ]
     },
     {
       "id" : 3,
