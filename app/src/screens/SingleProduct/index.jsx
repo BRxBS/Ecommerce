@@ -11,8 +11,9 @@ import './styles.scss'
 export const SingleProduct = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams(); //é o _id
+  const poductDetails = product?.PoductDetails
 
-  console.log("id SingleProduct", id);
+  console.log("poductDetails", poductDetails);
 
   const getTheProducts = () => {
     axios.get(`http://localhost:8000/products/` + id).then((res) => {
@@ -24,17 +25,13 @@ export const SingleProduct = () => {
     getTheProducts();
   }, []);
 
-  if (!product) return null;
-
-  const name = product?.productName;
-  console.log('name', name)
-
   const options = [   
-   {"id": "P", "productSize": " P"},
-  {"id": "M", "productSize": " M"},
-  {"id": "G", "productSize": " G"},
-  {"id": "GG", "productSize": " GG"}]
+    {"id": "P", "productSize": " P"},
+   {"id": "M", "productSize": " M"},
+   {"id": "G", "productSize": " G"},
+   {"id": "GG", "productSize": " GG"}]
 
+  if (!product) return null;
 
   return (
     <div className="main_container">
@@ -70,12 +67,12 @@ export const SingleProduct = () => {
           <div className="name_price_continer">
             
               <div className="productName_wrapper">
-                <h2 >{product?.productName}</h2>
+                <h2 >{product.productName}</h2>
               </div>
 
              
                 <div className="productPrice_wrapper">
-                  <h6>R${product?.productPrice}</h6>
+                  <h6>R${product.productPrice}</h6>
                 </div>
 
 
@@ -113,24 +110,20 @@ export const SingleProduct = () => {
     <div className="tab">
       <input type="radio" name="css-tabs" id="tab-1" checked className="tab-switch" />
 
-      <label for="tab-1" className="tab-label">OS DETALHES</label>
+      <label htmlFor="tab-1" className="tab-label">OS DETALHES</label>
        <div className="tab-content">
 
         <div className="first-box">
           <span>
-            <h3>Amapô</h3>
-            <p>Jaqueta jeans cropped Thais</p>
+            <h3>{product.productName}</h3>
+            <p className="productDiscription">{product.productDiscription}</p>
           </span>
 
           <span>
           <h4>Destaques</h4>
               <ul className="destaques_ul" >
-                <li>delavê</li>
-                <li>gola colarinho</li>
-                <li>mangas longas</li>
-                <li>vista com abotoamento frontal</li>
-                <li>dois bolsos frontais</li>
-                <li>detalhe de recorte</li>
+         
+          
               </ul>
           </span>
         </div>
@@ -161,7 +154,7 @@ export const SingleProduct = () => {
     
     <div className="tab">
       <input type="radio" name="css-tabs" id="tab-2" className="tab-switch" />
-      <label for="tab-2" className="tab-label">TAMANHOS & MEDIDAS</label>
+      <label htmlFor="tab-2" className="tab-label">TAMANHOS & MEDIDAS</label>
         <div className="tab-content">
           <div className="first-box">
     
@@ -174,9 +167,10 @@ export const SingleProduct = () => {
               </ul>
           </span>
 
-          <span>
+          <div>
           <h4>Informações sobre tamanhos</h4>
           <table>
+            <tbody>
             <tr>
               <td>Altura</td>
               <td>0,01 m</td>
@@ -193,11 +187,12 @@ export const SingleProduct = () => {
               <td>Cintura</td>
               <td>61 cm</td>
             </tr>
+            </tbody>
           </table>
 
           <p>O(a) modelo mede 0,01 m e está usando tamanho P (BR).</p>
 
-          </span>
+          </div>
 
         </div>
         <div className="second-box">
