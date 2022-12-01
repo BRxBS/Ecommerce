@@ -1,13 +1,11 @@
 import { ShoppingCart, MagnifyingGlass, HeartStraight } from "phosphor-react";
 import Icon from "../Icon/Icon";
+import SmallIcon from '../Icon/SmallIcon'
 import { Link } from "react-router-dom";
 import { TheModal } from "../Modal";
 import "./styles.scss";
 
 export function Header() {
-  // const [open, setOpen] = useState(false);
-  //   <div className="flex max-h-[5.375rem] min-w-full justify-between bg-black">
-  //  <header className="py-1 flex  w-screen items-center justify-between bg-black">
   return (
     <div className='container_header' >
       <header className="header">
@@ -15,6 +13,9 @@ export function Header() {
           <Icon className="icon" />
         </Link>
         
+        <Link to={"/"} className="small_icon" >
+          <SmallIcon  />
+        </Link>
 
 
         <div className="wrapper_icons">
@@ -24,6 +25,7 @@ export function Header() {
       <i className="fas fa-search">
          <MagnifyingGlass size={36}/>
       </i>
+
       </a>
     
        </div>
@@ -32,9 +34,19 @@ export function Header() {
             <ShoppingCart size={38} className=" ShoppingCart" />
           </Link>
 
+     { //    <Link to={"/Cart"} className="small_ShoppingCart">
+        //    <ShoppingCart size={30}  />
+        //  </Link>
+     }
+
           <Link to={"/Cart"} >
           <HeartStraight size={38} className='HeartStraight'/>
           </Link>
+
+        { // <Link to={"/Cart"} className='small_HeartStraight' >
+         // <HeartStraight size={30} />
+         // </Link>
+         }
 
           <TheModal />
         </div>
