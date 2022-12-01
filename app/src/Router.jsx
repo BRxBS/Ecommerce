@@ -7,7 +7,7 @@ import { Register } from "./screens/Register";
 import { Cart } from "./screens/Cart";
 import { Shipping } from "./screens/Shipping";
 import { Payment } from "./screens/Payment";
-import { Post } from "./screens/Post/inde";
+
 
 
 
@@ -21,7 +21,7 @@ export function Router() {
       <Route path="/Cart" element={<Cart />} />
       <Route path="/shipping" element={<Shipping />} />
       <Route path="/payment" element={<Payment />} />
-      <Route path="/post" element={<Post />} />
+
 
  
     </Routes>
