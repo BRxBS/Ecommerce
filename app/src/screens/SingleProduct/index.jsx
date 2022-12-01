@@ -35,7 +35,6 @@ export const SingleProduct = () => {
 
   return (
     <div className="main_container">
-      <Header />
 
       <div className="first_container">
     

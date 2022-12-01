@@ -8,7 +8,6 @@ import subscribe from './inscreva-se.png'
 export function Login() {
   return (
     <>
-      <Header />
       <div className="loging_conatiner">
         <img src={subscribe} alt="" />
         

@@ -114,7 +114,6 @@ export function Register() {
 
   return (
     <>
-      <Header />
       {success ? (
         <p>
           {" "}
