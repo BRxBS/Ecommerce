@@ -28,6 +28,7 @@
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146517/ecommerce/sapatos/4_ak7e8z.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146517/ecommerce/sapatos/5_wmq8kj.jpg",
       "productPrice": " 7.040",
+      "productAmount" : 5,
       "productDiscription" : "A ankle boot em couro preto brilhante é projetada com uma sola robusta e recortes elásticos em cada lado para uma entrada de pull-on. Concluído com uma alça removível no tornozelo pontilhada por cristais brilhantes envoltos em guarnições gravadas, assemelhando-se a jóias vintage. Possui o emblemático Duplo G enriquecendo a frente.",
       "PoductDetails": [
       {        
@@ -50,6 +51,7 @@
       "productImage4": "",
       "productImage5": "",
       "productPrice": "6.200",
+      "productAmount" : 5,
       "productDiscription" : "Fechamento por tira com fivela no tornozelo, aplicação de tachas Rockstud douradas, bico fino e salto agulha. Material: couro. Produzido em: Itália",
       "PoductDetails": [
          "",
@@ -71,6 +73,7 @@
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147386/ecommerce/sapatos/4_nyr6ky.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147386/ecommerce/sapatos/5_tl1itz.jpg",
       "productPrice": " 4.713",
+      "productAmount" : 5,
       "productDiscription" : "Dourado, couro, detalhe de borboleta exclusivo, peep toe, fechamento por amarração no tornozelo e salto agulha alto.",
       "PoductDetails": {
         "first": "",
@@ -92,6 +95,7 @@
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147880/ecommerce/blusa/4_mj6xqg.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147880/ecommerce/blusa/5_ug9w2u.jpg",
       "productPrice":  "11.735",
+      "productAmount" : 5,
       "productDiscription" : "Prateado, detalhe de paetês, efeito cota de malha, gola redonda, mangas curtas e barra assimétrica.",
       "PoductDetails": {
         "first": "",
@@ -113,6 +117,7 @@
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/4_o1v232.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/5_ulyxbg.jpg",
       "productPrice":  "780",
+      "productAmount" : 5,
       "productDiscription" : "Camisa cropped mangas longas branca Amir Slama. Com mangas longas com punho, estampa corrida e amarração frontal.",
       "PoductDetails": {
         "first": "",
@@ -134,6 +139,7 @@
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1667948332/ecommerce/blusa/Web_capture_8-11-2022_195741_www.farfetch.com_kqt38c.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1667948332/ecommerce/blusa/Web_capture_8-11-2022_195758_www.farfetch.com_ajsnhi.jpg",
       "productPrice": " 441",
+      "productAmount" : 5,
       "productSize" : [
 
         {"id": "P", "productSize": " P"},
@@ -164,6 +170,7 @@
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148980/ecommerce/blusa/4_l2qphm.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148980/ecommerce/blusa/5_uciuvn.jpg",
       "productPrice":  "1.376",
+      "productAmount" : 5,
       "productDiscription" : "Armani Exchange",
       "PoductDetails": {
         "first": "azul",
@@ -185,6 +192,7 @@
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150270/ecommerce/blusa/4_xxohns.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150270/ecommerce/blusa/5_tam6a6.jpg",
       "productPrice":  "3.180",
+      "productAmount" : 5,
       "productDiscription" : "Patch de logo posterior, cintura alta, passantes para cinto, cinco bolsos e acinturado.",
       "PoductDetails": {
         "first": "",
@@ -207,6 +215,7 @@
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150745/ecommerce/blusa/4_ok39hu.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150745/ecommerce/blusa/5_tkvxiq.jpg",
       "productPrice":  "6.800",
+      "productAmount" : 5,
       "productDiscription" : "Cintura alta, concealed rear zip fastening e bainha ondulada.",
       "PoductDetails": {
         "first": "",
