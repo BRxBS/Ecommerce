@@ -5,12 +5,14 @@ import {CartProvider}from './hooks/useCart'
 
 function App() {
   return (
-    <div>
+    <>
       <BrowserRouter>
+      <CartProvider>
       <Header/>
         <Router />
+        </CartProvider>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
