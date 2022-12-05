@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { HeartStraight } from "phosphor-react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { api } from '../../services/api';
 import "./styles.scss";
 
 const url = "http://localhost:8000/products";
