@@ -2,9 +2,26 @@ import React from "react";
 import { Header } from "../../components/Header";
 import {Minus, Plus, TrashSimple } from "phosphor-react";
 import { formatPrice } from "../../util/format";
+import { useCart } from "../../hooks/useCart";
 import './styles.scss'
 
 export function Cart() {
+  const {cart} = useCart()
+  
+
+  const cartFormatted = cart.map(product => ({
+    ...product,
+    priceformatted: formatPrice(product.productPrice),
+    subTotal: formatPrice(product.productPrice * product.amount)
+   }))
+   const total =
+     formatPrice(
+       cart.reduce((sumTotal, product) => {
+         return sumTotal + product.productPrice * product.amount
+       }, 0),
+       console.log('oi'),
+
+     )
 
   return (
     <>
@@ -22,13 +39,17 @@ export function Cart() {
           </thead>
 
           <tbody>
-            <tr className="cart_product">
+          {cartFormatted.map((product) => {
+            console.log('oi')
+            console.log('test', product.productName)
+            return(
+            <tr key={product.id} className="cart_product">
               <td className="">
-                <img src='https://res.cloudinary.com/dqh64c3iq/image/upload/v1667947965/ecommerce/blusa/Web_capture_8-11-2022_195217_www.farfetch.com_wzaoz8.jpg' alt="" />
+                <img src={product.productImage1} alt="" />
               </td>
               <td>
-                  <strong>title</strong>
-                  <span>priceformatted</span>
+                  <strong>{product.productName}</strong>
+                  <span>{product.priceformatted}</span>
                 </td>
                 <td>
             <div>
@@ -47,7 +68,7 @@ export function Cart() {
             </div>
             </td>
             <td>
-                  <strong>subTotal</strong>
+                  <strong>{product.subTotal}l</strong>
                 </td>
             <td>
               <button className="icon_button">
@@ -55,7 +76,8 @@ export function Cart() {
               </button>
             </td>
             </tr>
-           
+            );
+          })}
           </tbody>
         </table>
 
@@ -63,7 +85,7 @@ export function Cart() {
           <button type="button" >Finalizar pedido</button>
           <div className="cart_total">
             <span>TOTAL</span>
-            <strong>tottal</strong>
+            <strong>{total}</strong>
           </div>
         </footer>
        
