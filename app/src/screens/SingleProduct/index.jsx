@@ -1,19 +1,21 @@
-import { Header } from "../../components/Header";
 import { HeartStraight } from "phosphor-react";
-import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import { formatPrice } from "../../util/format";
+import { api } from "../../services/api";
 import axios from "axios";
 import { SizeDropdown } from "./sizeDropdown";
+import { useCart } from '../../hooks/useCart';
 import './styles.scss'
 
 
 export const SingleProduct = () => {
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState([]);
   const { id } = useParams(); //é o _id
-  const poductDetails = product?.PoductDetails
+  const {addProduct, cart} = useCart()
 
-  console.log("poductDetails", poductDetails);
+  // const poductDetails = product?.PoductDetails
+  // console.log("poductDetails", poductDetails);
 
   const getTheProducts = () => {
     axios.get(`http://localhost:8000/products/` + id).then((res) => {
@@ -21,9 +23,25 @@ export const SingleProduct = () => {
       setProduct(Product);
     });
   };
+  
   useEffect(() => {
     getTheProducts();
   }, []);
+
+  // const cartItemsAmount = cart.reduce((sumAmount, product) =>{
+  //   const newAumAmount = {...sumAmount};
+  //   newAumAmount[product.id] = product.amount;
+
+  //   return newAumAmount;
+  // })
+
+  function handleAddProduct(id) {
+    addProduct(id);
+    console.log(addProduct)
+  };
+  console.log(handleAddProduct)
+
+
 
   const options = [   
     {"id": "P", "productSize": " P"},
@@ -40,8 +58,6 @@ export const SingleProduct = () => {
     
           <div className="img_wrapper">
 
-           
-            
             <img className="img_1"
                 src={product?.productImage1}
               />
@@ -84,7 +100,10 @@ export const SingleProduct = () => {
                   <div className="wrapper_button">
 
 
-                <button className="card_button">
+                <button 
+                type="button"
+                onClick={() => handleAddProduct(product.id)}
+                className="card_button">
                      Adicionar ao carrinho
                     </button>
 
@@ -229,4 +248,5 @@ export const SingleProduct = () => {
    
     </div>
   );
+
 };
