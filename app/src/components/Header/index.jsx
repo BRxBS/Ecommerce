@@ -3,9 +3,15 @@ import Icon from "../Icon/Icon";
 import SmallIcon from '../Icon/SmallIcon'
 import { Link } from "react-router-dom";
 import { TheModal } from "../Modal";
+import { useCart } from "../../hooks/useCart";
 import "./styles.scss";
 
 export function Header() {
+  const {cart} = useCart()
+  const cartSize = cart.length;
+
+ 
+ 
   return (
     <div className='container_header' >
       <header className="header">
@@ -30,9 +36,15 @@ export function Header() {
     
        </div>
 
-          <Link to={"/Cart"}>
+          <Link 
+         
+          to={"/Cart"}>
             <ShoppingCart size={38} className=" ShoppingCart" />
           </Link>
+          {cartSize === 0 ? '' :  <p
+            className="cartLength"
+            >{cartSize}</p>}
+         
 
      { //    <Link to={"/Cart"} className="small_ShoppingCart">
         //    <ShoppingCart size={30}  />
