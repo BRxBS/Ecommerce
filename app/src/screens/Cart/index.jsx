@@ -1,12 +1,12 @@
 import React from "react";
-import { Header } from "../../components/Header";
+import { Link } from "react-router-dom";
 import {Minus, Plus, TrashSimple } from "phosphor-react";
 import { formatPrice } from "../../util/format";
 import { useCart } from "../../hooks/useCart";
 import './styles.scss'
 
 export function Cart() {
-  const {cart} = useCart()
+  const {cart, removeProduct, updateProductAmount} = useCart()
   
 
   const cartFormatted = cart.map(product => ({
@@ -19,9 +19,28 @@ export function Cart() {
        cart.reduce((sumTotal, product) => {
          return sumTotal + product.productPrice * product.amount
        }, 0),
-       console.log('oi'),
+       )
 
-     )
+       function handleProductIncrement(product) {
+        updateProductAmount({productId: product.id, amount: product.amount + 1})
+
+      }
+    
+      function handleProductDecrement(product) {
+         updateProductAmount({ productId: product.id, amount: product.amount - 1});
+      }
+    
+      function handleRemoveProduct(id) {
+        removeProduct(id)
+
+      }
+      // styles of the Link
+      const linkStyle = {
+        display: "flex",
+        margin: "1rem",
+        textDecoration: "none",
+        color: 'black'
+      };
 
   return (
     <>
@@ -40,28 +59,41 @@ export function Cart() {
 
           <tbody>
           {cartFormatted.map((product) => {
-            console.log('oi')
-            console.log('test', product.productName)
             return(
-            <tr key={product.id} className="cart_product">
-              <td className="">
+            <tr key={product.id} >
+              <Link 
+               style={linkStyle}
+              to={`/products/${product.id}`} 
+           >
+              <td >
                 <img src={product.productImage1} alt="" />
               </td>
               <td>
                   <strong>{product.productName}</strong>
                   <span>{product.priceformatted}</span>
                 </td>
+              </Link>
                 <td>
             <div>
-              <button className="icon_button">
+              <button 
+              type="button"
+              className="icon_button"
+              disabled={product.amount <= 1}
+              onClick={() => handleProductDecrement(product)}
+              >
               <Minus size={28} />
               </button>
+
               <input 
               type="text" 
               readOnly
+              value={product.amount}
               />
 
-              <button className="icon_button">
+              <button
+              type="button"
+              className="icon_button"
+              onClick={() => handleProductIncrement(product)}>
               <Plus size={28} />
               </button>
        
@@ -71,7 +103,11 @@ export function Cart() {
                   <strong>{product.subTotal}l</strong>
                 </td>
             <td>
-              <button className="icon_button">
+              <button
+               type="button"
+               className="icon_button"
+               onClick={() => handleRemoveProduct(product.id)}
+               >
               <TrashSimple size={28} />
               </button>
             </td>
