@@ -1,4 +1,4 @@
-import { HeartStraight } from "phosphor-react";
+import { HeartStraight, ShoppingCart } from "phosphor-react";
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { formatPrice } from "../../util/format";
@@ -14,11 +14,19 @@ export const SingleProduct = () => {
   const { id } = useParams(); //é o _id
   const {addProduct, cart} = useCart()
 
-  // const poductDetails = product?.PoductDetails
-  // console.log("poductDetails", poductDetails);
+  const cartItemsAmount = cart.reduce((sumAmount, Product) =>{
+    const newSumAmount = {...sumAmount};
+    newSumAmount[Product.id] = Product.amount;
+
+    return newSumAmount;
+  }, 0);
+
+
+  console.log("cartItemsAmount", cartItemsAmount)
+
 
   const getTheProducts = () => {
-    axios.get(`http://localhost:8000/products/` + id).then((res) => {
+    api.get(`/products/${id}`).then((res) => {
       const Product = res.data;
       setProduct(Product);
     });
@@ -28,18 +36,12 @@ export const SingleProduct = () => {
     getTheProducts();
   }, []);
 
-  // const cartItemsAmount = cart.reduce((sumAmount, product) =>{
-  //   const newAumAmount = {...sumAmount};
-  //   newAumAmount[product.id] = product.amount;
 
-  //   return newAumAmount;
-  // })
 
   function handleAddProduct(id) {
     addProduct(id);
-    console.log(addProduct)
+   
   };
-  console.log(handleAddProduct)
 
 
 
@@ -49,9 +51,9 @@ export const SingleProduct = () => {
    {"id": "G", "productSize": " G"},
    {"id": "GG", "productSize": " GG"}]
 
-  if (!product) return null;
 
   return (
+
     <div className="main_container">
 
       <div className="first_container">
@@ -74,8 +76,6 @@ export const SingleProduct = () => {
                 <img className="img_5"
                 src={product?.productImage5}
               />
-           
-
            
           </div>
 
@@ -102,13 +102,20 @@ export const SingleProduct = () => {
 
                 <button 
                 type="button"
+             
                 onClick={() => handleAddProduct(product.id)}
                 className="card_button">
+                      <div>
+                     <ShoppingCart size={28} className=" ShoppingCart" />
+                     <p>{cartItemsAmount[product.id] || 0} </p>
+                     </div>
+
                      Adicionar ao carrinho
+
+
                     </button>
 
                 <button className="favorite_button">
-                      Favoritar
                       <HeartStraight size={25}  className="fav_HeartStraight"/>
                 </button>
                   
@@ -126,7 +133,7 @@ export const SingleProduct = () => {
       <div className="wrapper">
   <div className="tabs">
     <div className="tab">
-      <input type="radio" name="css-tabs" id="tab-1" checked className="tab-switch" />
+      <input type="radio" name="css-tabs" id="tab-1" defaultChecked className="tab-switch" />
 
       <label htmlFor="tab-1" className="tab-label">OS DETALHES</label>
        <div className="tab-content">
