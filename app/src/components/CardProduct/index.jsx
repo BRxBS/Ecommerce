@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 import { HeartStraight } from "phosphor-react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { api } from '../../services/api';
+import { useFav } from "../../hooks/useFav"; 
 import "./styles.scss";
 
 const url = "http://localhost:8000/products";
 
 export function CardProduct() {
-  const [products, setProductes] = useState("");
+  const [products, setProductes] = useState([]);
+
+  console.log("product", products)
+
+  const { fav, addProductFav, removeProduct} = useFav();
 
   const getAllProducts = () => {
     axios.get(url).then((res) => {
@@ -21,8 +25,25 @@ export function CardProduct() {
     getAllProducts();
   }, []);
 
-  if (!products) return null;
+  function handleAddProductOnFav(id) {
+    addProductFav(id);
+    console.log('oi')
+   
+  };
+  const FavItemsAmount = fav.reduce((sumAmount, Product) =>{
+    const newSumAmount = {...sumAmount};
+    newSumAmount[Product.id] = Product.amount;
 
+    return newSumAmount;
+  }, 0);
+
+  
+  function handleRemoveProduct(id) {
+    removeProduct(id)
+
+
+  }
+  
   return (
     <>
       <div className="container_CardProduct">
@@ -64,7 +85,14 @@ export function CardProduct() {
                   R${product.productPrice}
 
                 </h3>
-                <HeartStraight size={30} />
+                 {
+                  FavItemsAmount[product.id] > 0 
+                  ?  <HeartStraight size={30}    weight="fill" color= "#017ff0"  onClick={() => handleRemoveProduct(product.id)} /> 
+                  : <HeartStraight size={30}    onClick={() =>  handleAddProductOnFav(product.id)} />
+                 }
+                 
+
+               
                 </div>
   
               </div>
