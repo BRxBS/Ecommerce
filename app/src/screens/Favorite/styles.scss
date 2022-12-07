@@ -1,0 +1,131 @@
+.container_Card_fav_product {
+    display: grid;
+    height: auto;
+    grid-gap: 20px 12px;
+    margin: auto;
+    grid-template-columns: repeat(4, calc(25% - 8px));
+    grid-template-rows: auto;
+  }
+  .container_fav_map {
+    display: flex;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.6;
+  
+    height:23rem;
+    width: 15rem;
+    margin: 1rem 1rem;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+    
+  }
+  
+  @media (max-width: 990px) {
+    .container_Card_fav_product {
+      // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, calc(25% - 8px));
+      grid-gap: 0.5rem 2rem;
+      grid-template-rows: auto;
+      margin-right: initial;
+      margin-left: initial;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container_Card_fav_product {
+      grid-template-columns: repeat(2, calc(25% - 8px));
+      grid-gap: 0.5rem 6rem;
+      grid-template-rows: auto;
+      margin-right: initial;
+      margin-left: initial;
+    }
+  }
+  
+  @media (max-width: 350px) {
+    .container_Car_fav_product {
+      grid-template-columns: repeat(1, calc(25% - 8px));
+      grid-gap: 0.5rem 6rem;
+      grid-template-rows: auto;
+      margin-right: initial;
+      margin-left: initial;
+    }
+  }
+  
+  .content_fav_wrapper {
+  
+    height: 20rem;
+    width: 13rem;
+    display: block;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 3px;
+    margin: 1rem;
+  
+  }
+  
+  .img_fav_container{
+    display: flex;
+    position: relative;
+    right: 0.50rem;
+    bottom: 0.50rem;
+    height: 15rem;
+    width: 14rem;
+  
+  }
+  
+  .img_fav {
+    height: 15rem;
+    background-color: white;
+    opacity: 1;
+    transition: .5s ease;
+    position: relative;
+    left: 20px;
+  }
+
+  .name_price_fav_wraper {
+    height: 5rem;
+    width: 12rem;
+    border-radius: 3px;
+    padding: 0.5rem;
+  
+  
+    .name_fav_link {
+      font-family: inherit;
+      font-weight: 600;
+      font-size: medium;
+      display: flex;
+      justify-content: left;
+      color: black;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+  
+      position: relative;
+      top: -20px;
+  
+    }
+  
+  .price_heart_fav_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+  
+    position: relative;
+    top: -10px;
+    svg{
+      cursor: pointer;
+      color: #017ff0;
+     
+    }
+  
+  }
+  
+  }
+  
+  
+  
+  
