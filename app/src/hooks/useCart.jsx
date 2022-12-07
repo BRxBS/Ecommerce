@@ -1,6 +1,4 @@
-import { Children } from 'react';
-import { useEffect } from 'react';
-import { createContext, ReactNode, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 import { api } from '../services/api';
 
