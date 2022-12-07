@@ -4,12 +4,14 @@ import SmallIcon from '../Icon/SmallIcon'
 import { Link } from "react-router-dom";
 import { TheModal } from "../Modal";
 import { useCart } from "../../hooks/useCart";
+import { useFav } from "../../hooks/useFav";
 import "./styles.scss";
 
 export function Header() {
   const {cart} = useCart()
+  const {fav} = useFav()
   const cartSize = cart.length;
-
+  const favActive = fav.length;
  
  
   return (
@@ -38,7 +40,7 @@ export function Header() {
 
           <Link 
          
-          to={"/Cart"}>
+          to={"/cart"}>
             <ShoppingCart size={38} className=" ShoppingCart" />
           </Link>
           {cartSize === 0 ? '' :  <p
@@ -51,8 +53,13 @@ export function Header() {
         //  </Link>
      }
 
-          <Link to={"/Cart"} >
-          <HeartStraight size={38} className='HeartStraight'/>
+          <Link to={"/favorite"} >
+            { favActive < 0 
+            ? <HeartStraight size={38} className='HeartStraight'/>
+            : <HeartStraight size={38}    weight="fill" color= "#017ff0"  /> 
+
+            }
+
           </Link>
 
         { // <Link to={"/Cart"} className='small_HeartStraight' >
