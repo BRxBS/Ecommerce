@@ -3,16 +3,20 @@ import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { formatPrice } from "../../util/format";
 import { api } from "../../services/api";
-import axios from "axios";
 import { SizeDropdown } from "./sizeDropdown";
 import { useCart } from '../../hooks/useCart';
+import { useFav } from "../../hooks/useFav"; 
 import './styles.scss'
 
 
 export const SingleProduct = () => {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState({});
   const { id } = useParams(); //é o _id
-  const {addProduct, cart} = useCart()
+
+  const { addProductFav } = useFav();
+  const { addProduct, cart } = useCart();
+
+  console.log("product", product)
 
   const cartItemsAmount = cart.reduce((sumAmount, Product) =>{
     const newSumAmount = {...sumAmount};
@@ -22,7 +26,6 @@ export const SingleProduct = () => {
   }, 0);
 
 
-  console.log("cartItemsAmount", cartItemsAmount)
 
 
   const getTheProducts = () => {
@@ -38,10 +41,16 @@ export const SingleProduct = () => {
 
 
 
-  function handleAddProduct(id) {
+  function handleAddProductOnCart(id) {
     addProduct(id);
    
   };
+  
+  function handleAddProductOnFav(id) {
+    addProductFav(id);
+   
+  };
+
 
 
 
@@ -102,21 +111,20 @@ export const SingleProduct = () => {
 
                 <button 
                 type="button"
-             
-                onClick={() => handleAddProduct(product.id)}
+                onClick={() => handleAddProductOnCart(product.id)}
                 className="card_button">
                       <div>
-                     <ShoppingCart size={28} className=" ShoppingCart" />
-                     <p>{cartItemsAmount[product.id] || 0} </p>
+                        <ShoppingCart size={28} className=" ShoppingCart" />
+                         <p>{cartItemsAmount[product.id] || 0} </p>
                      </div>
-
                      Adicionar ao carrinho
-
-
                     </button>
 
-                <button className="favorite_button">
+                <button 
+                className="favorite_button"
+                onClick={() =>  handleAddProductOnFav(product.id)}>
                       <HeartStraight size={25}  className="fav_HeartStraight"/>
+                      {/* change the colo of the heart */}
                 </button>
                   
                   </div>
