@@ -1,17 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Header } from "../../components/Header";
 import { CheckCircle, Info, XCircle } from "phosphor-react";
 import { Login } from "../Login";
-import axios from "axios";
+import { api } from "../../services/api";
+
 import './styles.scss'
 import subscribe from './inscreva-se.png'
+
 
 const USER_REGEX = /^[a-zA-Z][a-zA-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-const url = "http://localhost:8000/users";
 
 export function Register() {
   const userRef = useRef();
@@ -70,24 +70,20 @@ export function Register() {
   const fortmatResponse = (res) => {
     return JSON.stringify(res, null, 2);
   };
+
   async function handleSubmit() {
     const postData = {
-      username: user,
+      name: user,
       email: email,
-      password: pwd,
+      macthPwd: matchPwd,
     };
 
     try {
-      const response = await axios.post(
-        url,
-        postData
-        //  JSON.stringify({username:user, email:email, password: pwd}),
-        // {
-
-        //     headers: {'Contetent-Type' : 'application/json'},
-        //     withCredentials:true
-
-        // }
+      const response = await api.post(
+        `/users/`,
+         postData,
+         JSON.stringify({name:user, email:email, macthPwd: matchPwd})
+     
       );
 
       const result = {
@@ -131,7 +127,6 @@ export function Register() {
             {errMsg}
           </p>
 
-          
        
           <form onSubmit={handleSubmit} className="form_register">
            <h2>Inscreva-se</h2>
