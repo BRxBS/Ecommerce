@@ -39,7 +39,7 @@
   ],
   "products": [
     {
-      "id" : 1,
+      "id": 1,
       "category_id": "shoes",
       "productName": "Ankle boot de couro com cinto",
       "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146518/ecommerce/sapatos/1_tljgrw.jpg",
@@ -48,21 +48,21 @@
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146517/ecommerce/sapatos/4_ak7e8z.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146517/ecommerce/sapatos/5_wmq8kj.jpg",
       "productPrice": " 7.040",
-      "productAmount" : 5,
-      "productDiscription" : "A ankle boot em couro preto brilhante é projetada com uma sola robusta e recortes elásticos em cada lado para uma entrada de pull-on. Concluído com uma alça removível no tornozelo pontilhada por cristais brilhantes envoltos em guarnições gravadas, assemelhando-se a jóias vintage. Possui o emblemático Duplo G enriquecendo a frente.",
+      "productAmount": 5,
+      "productDiscription": "A ankle boot em couro preto brilhante é projetada com uma sola robusta e recortes elásticos em cada lado para uma entrada de pull-on. Concluído com uma alça removível no tornozelo pontilhada por cristais brilhantes envoltos em guarnições gravadas, assemelhando-se a jóias vintage. Possui o emblemático Duplo G enriquecendo a frente.",
       "PoductDetails": [
-      {        
-      "first": "Preta",
-      "second": "couro",
-      "third": "salto de 7 cm",
-      "fouth": "plataforma de 2 cm",
-      "fifth": "",
-      "sixth": ""}
-  
+        {
+          "first": "Preta",
+          "second": "couro",
+          "third": "salto de 7 cm",
+          "fouth": "plataforma de 2 cm",
+          "fifth": "",
+          "sixth": ""
+        }
       ]
     },
     {
-      "id" : 2,
+      "id": 2,
       "category_id": "shoes",
       "productName": "Scarpin Rockstud de couro",
       "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669146878/ecommerce/sapatos/3_xmebws.jpg",
@@ -71,20 +71,19 @@
       "productImage4": "",
       "productImage5": "",
       "productPrice": "6.200",
-      "productAmount" : 5,
-      "productDiscription" : "Fechamento por tira com fivela no tornozelo, aplicação de tachas Rockstud douradas, bico fino e salto agulha. Material: couro. Produzido em: Itália",
+      "productAmount": 5,
+      "productDiscription": "Fechamento por tira com fivela no tornozelo, aplicação de tachas Rockstud douradas, bico fino e salto agulha. Material: couro. Produzido em: Itália",
       "PoductDetails": [
-         "",
-         "",
-         "",
-         "",
-         "",
-         ""
-  
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
       ]
     },
     {
-      "id" : 3,
+      "id": 3,
       "category_id": "shoes",
       "productName": "Sandália Vanessa com detalhe de borboleta",
       "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147386/ecommerce/sapatos/1_jbvefe.jpg",
@@ -93,8 +92,8 @@
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147386/ecommerce/sapatos/4_nyr6ky.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147386/ecommerce/sapatos/5_tl1itz.jpg",
       "productPrice": " 4.713",
-      "productAmount" : 5,
-      "productDiscription" : "Dourado, couro, detalhe de borboleta exclusivo, peep toe, fechamento por amarração no tornozelo e salto agulha alto.",
+      "productAmount": 5,
+      "productDiscription": "Dourado, couro, detalhe de borboleta exclusivo, peep toe, fechamento por amarração no tornozelo e salto agulha alto.",
       "PoductDetails": {
         "first": "",
         "second": "",
@@ -102,11 +101,10 @@
         "fouth": "",
         "fifth": "",
         "sixth": ""
-  
       }
     },
     {
-      "id" : 4,
+      "id": 4,
       "category_id": "shirt",
       "productName": "Blusa mangas curtas com discos metálicos",
       "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147880/ecommerce/blusa/1_qgae7g.jpg",
@@ -114,9 +112,9 @@
       "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147880/ecommerce/blusa/3_bpo12s.jpg",
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147880/ecommerce/blusa/4_mj6xqg.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669147880/ecommerce/blusa/5_ug9w2u.jpg",
-      "productPrice":  "11.735",
-      "productAmount" : 5,
-      "productDiscription" : "Prateado, detalhe de paetês, efeito cota de malha, gola redonda, mangas curtas e barra assimétrica.",
+      "productPrice": "11.735",
+      "productAmount": 5,
+      "productDiscription": "Prateado, detalhe de paetês, efeito cota de malha, gola redonda, mangas curtas e barra assimétrica.",
       "PoductDetails": {
         "first": "",
         "second": "",
@@ -124,11 +122,10 @@
         "fouth": "",
         "fifth": "",
         "sixth": ""
-  
       }
     },
     {
-      "id" : 5,
+      "id": 5,
       "category_id": "shirt",
       "productName": "Camisa cropped mangas longas",
       "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/1_pwerho.jpg",
@@ -136,9 +133,9 @@
       "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/3_a7mng1.jpg",
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/4_o1v232.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148205/ecommerce/blusa/5_ulyxbg.jpg",
-      "productPrice":  "780",
-      "productAmount" : 5,
-      "productDiscription" : "Camisa cropped mangas longas branca Amir Slama. Com mangas longas com punho, estampa corrida e amarração frontal.",
+      "productPrice": "780",
+      "productAmount": 5,
+      "productDiscription": "Camisa cropped mangas longas branca Amir Slama. Com mangas longas com punho, estampa corrida e amarração frontal.",
       "PoductDetails": {
         "first": "",
         "second": "",
@@ -146,11 +143,10 @@
         "fouth": "",
         "fifth": "",
         "sixth": ""
-  
       }
     },
     {
-      "id" : 6,
+      "id": 6,
       "category_id": 2,
       "productName": "Jaqueta jeans cropped Thais",
       "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1667947965/ecommerce/blusa/Web_capture_8-11-2022_195217_www.farfetch.com_wzaoz8.jpg",
@@ -159,29 +155,36 @@
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1667948332/ecommerce/blusa/Web_capture_8-11-2022_195741_www.farfetch.com_kqt38c.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1667948332/ecommerce/blusa/Web_capture_8-11-2022_195758_www.farfetch.com_ajsnhi.jpg",
       "productPrice": " 441",
-      "productAmount" : 5,
-      "productSize" : [
-
-        {"id": "P", "productSize": " P"},
-        {"id": "M", "productSize": " M"},
-        {"id": "G", "productSize": " G"},
-        {"id": "GG", "productSize": " GG"}
-    ],
-    "PoductDetails": {
-      "first": "delavê",
-      "second": "gola colarinho",
-      "third": "mangas longas",
-      "fouth": "vista com abotoamento frontal",
-      "fifth": "dois bolsos frontais",
-      "sixth": "detalhe de recorte"
-
-    }
-  
-
+      "productAmount": 5,
+      "productSize": [
+        {
+          "id": "P",
+          "productSize": " P"
+        },
+        {
+          "id": "M",
+          "productSize": " M"
+        },
+        {
+          "id": "G",
+          "productSize": " G"
+        },
+        {
+          "id": "GG",
+          "productSize": " GG"
+        }
+      ],
+      "PoductDetails": {
+        "first": "delavê",
+        "second": "gola colarinho",
+        "third": "mangas longas",
+        "fouth": "vista com abotoamento frontal",
+        "fifth": "dois bolsos frontais",
+        "sixth": "detalhe de recorte"
+      }
     },
-
     {
-      "id" : 7,
+      "id": 7,
       "category_id": "bottom",
       "productName": "Short jeans desfiado",
       "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148980/ecommerce/blusa/1_zbpbdg.jpg",
@@ -189,9 +192,9 @@
       "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148980/ecommerce/blusa/3_nsxcqw.jpg",
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148980/ecommerce/blusa/4_l2qphm.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669148980/ecommerce/blusa/5_uciuvn.jpg",
-      "productPrice":  "1.376",
-      "productAmount" : 5,
-      "productDiscription" : "Armani Exchange",
+      "productPrice": "1.376",
+      "productAmount": 5,
+      "productDiscription": "Armani Exchange",
       "PoductDetails": {
         "first": "azul",
         "second": "cintura média",
@@ -199,11 +202,10 @@
         "fouth": "fechamento por botão e zíper",
         "fifth": "cinco bolsos",
         "sixth": "acabamento desfiado"
-  
       }
     },
     {
-      "id" : 8,
+      "id": 8,
       "category_id": "bottom",
       "productName": "Saia metálica cintura alta",
       "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150271/ecommerce/blusa/1_xyfy6l.jpg",
@@ -211,9 +213,9 @@
       "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150270/ecommerce/blusa/3_gzlwuw.jpg",
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150270/ecommerce/blusa/4_xxohns.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150270/ecommerce/blusa/5_tam6a6.jpg",
-      "productPrice":  "3.180",
-      "productAmount" : 5,
-      "productDiscription" : "Patch de logo posterior, cintura alta, passantes para cinto, cinco bolsos e acinturado.",
+      "productPrice": "3.180",
+      "productAmount": 5,
+      "productDiscription": "Patch de logo posterior, cintura alta, passantes para cinto, cinco bolsos e acinturado.",
       "PoductDetails": {
         "first": "",
         "second": "",
@@ -221,12 +223,10 @@
         "fouth": "",
         "fifth": "",
         "sixth": ""
-
-    }
-    
+      }
     },
     {
-      "id" : 9,
+      "id": 9,
       "category_id": "bottom",
       "productName": "Minissaia de renda",
       "productImage1": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150745/ecommerce/blusa/1_kfbbsl.jpg",
@@ -234,9 +234,9 @@
       "productImage3": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150745/ecommerce/blusa/3_u0pfsn.jpg",
       "productImage4": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150745/ecommerce/blusa/4_ok39hu.jpg",
       "productImage5": "https://res.cloudinary.com/dqh64c3iq/image/upload/v1669150745/ecommerce/blusa/5_tkvxiq.jpg",
-      "productPrice":  "6.800",
-      "productAmount" : 5,
-      "productDiscription" : "Cintura alta, concealed rear zip fastening e bainha ondulada.",
+      "productPrice": "6.800",
+      "productAmount": 5,
+      "productDiscription": "Cintura alta, concealed rear zip fastening e bainha ondulada.",
       "PoductDetails": {
         "first": "",
         "second": "",
@@ -244,12 +244,21 @@
         "fouth": "",
         "fifth": "",
         "sixth": ""
-
-    }
+      }
     }
   ],
-
-  "profile": {
-    "name": "typicode"
-  }
+  "users": [
+    {
+      "name": "Bruna",
+      "email": "sheilaluisabruna@gmail.com",
+      "macthPwd": "96233782",
+      "id": 1
+    },
+    {
+      "name": "luisa",
+      "email": "brunahta2025@hotmail.com",
+      "macthPwd": "Brusa66!",
+      "id": 2
+    }
+  ]
 }
