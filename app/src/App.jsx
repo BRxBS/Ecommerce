@@ -1,18 +1,21 @@
 import { BrowserRouter } from "react-router-dom";
 import { Router } from "./Router";
 import { Header } from "./components/Header";
-import { CartProvider }from './hooks/useCart'
-import { FavProvider } from './hooks/useFav'
+import { CartProvider }from './hooks/useCart';
+import { FavProvider } from './hooks/useFav';
+import { UserProvider } from './hooks/useUser';
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <FavProvider>
-          <CartProvider>
-            <Header/>
-            <Router />
-          </CartProvider>
+          <UserProvider>
+            <CartProvider>
+              <Header/>
+              <Router />
+            </CartProvider>
+          </UserProvider>
         </FavProvider>
       </BrowserRouter>
     </>
