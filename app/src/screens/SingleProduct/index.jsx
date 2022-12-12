@@ -13,12 +13,20 @@ export const SingleProduct = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams(); //é o _id
 
-  const { addProductFav } = useFav();
+  const { addProductFav, fav, removeProduct } = useFav();
   const { addProduct, cart } = useCart();
 
   console.log("product", product)
 
   const cartItemsAmount = cart.reduce((sumAmount, Product) =>{
+    const newSumAmount = {...sumAmount};
+    newSumAmount[Product.id] = Product.amount;
+
+    return newSumAmount;
+  }, 0);
+
+
+  const FavItemsAmount = fav.reduce((sumAmount, Product) =>{
     const newSumAmount = {...sumAmount};
     newSumAmount[Product.id] = Product.amount;
 
@@ -50,6 +58,12 @@ export const SingleProduct = () => {
     addProductFav(id);
    
   };
+    
+  function handleRemoveProduct(id) {
+    removeProduct(id)
+
+
+  }
 
 
 
@@ -120,13 +134,14 @@ export const SingleProduct = () => {
                      Adicionar ao carrinho
                     </button>
 
-                <button 
-                className="favorite_button"
-                onClick={() =>  handleAddProductOnFav(product.id)}>
-                      <HeartStraight size={25}  className="fav_HeartStraight"/>
+                    {
+                  FavItemsAmount[product.id] > 0
+                  ?  <HeartStraight size={40}    weight="fill" color= "#017ff0"  onClick={() => handleRemoveProduct(product.id)} className="fav_HeartStraight" /> 
+                  : <HeartStraight size={40}  onClick={() =>  handleAddProductOnFav(product.id)}  className="fav_HeartStraight"/>
+                 }
+                      
                       {/* change the colo of the heart */}
-                </button>
-                  
+              
                   </div>
 
                
