@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useState, } from "react";
 import { Link } from "react-router-dom";
-import { Header } from "../../components/Header";
+import { useUser } from "../../hooks/useUser";
+
 import './styles.scss'
 import subscribe from './inscreva-se.png'
 
 
+
 export function Login() {
+
+  const [email, setEmail] = useState("");
+  const [pwd, setPwd] = useState("");
+
+  // console.log("email", email)
+  // console.log("pwd", pwd)
+
+  const { user, userLogin } = useUser();
+
+  console.log("user", user)
+
+  function handleAddUser(email) {
+    userLogin(email);
+
+   console.log("email handleAddUser", email)
+  };
+
+    
+
   return (
     <>
       <div className="loging_conatiner">
@@ -14,12 +35,13 @@ export function Login() {
       
         <form className="form_login">
           <h2>Login</h2>
-          <labe className="text-2xl">Email</labe>
+          <label className="text-2xl">Email</label>
           <br />
           <input
             className="email_pass"
             type="email"
             placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
           /> 
           <br />
           <label>Senha</label>
@@ -28,6 +50,7 @@ export function Login() {
             className="email_pass"
             type="password"
             placeholder="Senha"
+            onChange={(e) => setPwd(e.target.value)}
           /> 
           <br />
           <div className="options_wrapper">
@@ -46,11 +69,19 @@ export function Login() {
             </a>
           </div>
           <br />
-          <button
-            type="submit"
-          >
-            Entrar
-          </button>
+    
+        
+          <input
+          className="sand"
+            onClick={() => handleAddUser(email)}
+            type="button" 
+            value="Enviar"
+
+        />
+         
+  
+
+
           <br />
           <div className="register">
             <span>
@@ -61,6 +92,7 @@ export function Login() {
             </span>
           </div>
         </form>
+ 
       </div>
     </>
   );
