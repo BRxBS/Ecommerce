@@ -54,9 +54,9 @@ export function Header() {
      }
 
           <Link to={"/favorite"} >
-            { favActive < 0 
+            { favActive < 1 
             ? <HeartStraight size={38} className='HeartStraight'/>
-            : <HeartStraight size={38}    weight="fill" color= "#017ff0"  /> 
+            : <HeartStraight size={38} className='HeartStraight'   weight="fill" color= "#017ff0"  /> 
 
             }
 
