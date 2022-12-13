@@ -1,4 +1,4 @@
-import React, { useState, } from "react";
+import React, { useEffect, useState, } from "react";
 import { Link } from "react-router-dom";
 import { useUser } from "../../hooks/useUser";
 
@@ -9,8 +9,10 @@ import subscribe from './inscreva-se.png'
 
 export function Login() {
 
-  const [email, setEmail] = useState("");
-  const [pwd, setPwd] = useState("");
+  const [login, setLogin] = useState({
+    email: "",
+    password: ""
+  });
 
   // console.log("email", email)
   // console.log("pwd", pwd)
@@ -20,11 +22,19 @@ export function Login() {
   console.log("user", user)
 
   function handleAddUser(email) {
+
+
     userLogin(email);
 
    console.log("email handleAddUser", email)
   };
 
+  // useEffect(() => {
+  //   setLogin(email, pwd)
+
+  //   console.log("login after set", login)
+
+  // },[pwd])
     
 
   return (
@@ -41,7 +51,7 @@ export function Login() {
             className="email_pass"
             type="email"
             placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setLogin((prevstate) => ({...prevstate, email: e.target.value}))}
           /> 
           <br />
           <label>Senha</label>
@@ -50,7 +60,7 @@ export function Login() {
             className="email_pass"
             type="password"
             placeholder="Senha"
-            onChange={(e) => setPwd(e.target.value)}
+            onChange={(e) => setLogin((prevstate) => ({...prevstate, pwd: e.target.value}))}
           /> 
           <br />
           <div className="options_wrapper">
@@ -73,7 +83,7 @@ export function Login() {
         
           <input
           className="sand"
-            onClick={() => handleAddUser(email)}
+            onClick={() => handleAddUser(login)}
             type="button" 
             value="Enviar"
 
