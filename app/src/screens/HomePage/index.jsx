@@ -6,7 +6,6 @@ import "./styles.scss";
 export function HomePage() {
   return (
     <div className="homePage_wrapper">
-      <BarTwo />
        <div className="container_HomePage">
         <CardProduct />
       </div>
