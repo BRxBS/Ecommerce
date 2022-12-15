@@ -106,13 +106,13 @@ export function Cart() {
                   style={linkStyle}
                   to={`/products/${product.id}`} 
               >
-                  <td >
+                  <>
                     <img src={product.productImage1} alt="" />
-                  </td>
-                  <td>
+                  </>
+                  <p>
                       <strong>{product.productName}</strong>
                       <span>{product.priceformatted}</span>
-                    </td>
+                    </p>
                   </Link>
                   </td>
 

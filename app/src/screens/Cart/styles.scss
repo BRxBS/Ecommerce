@@ -1,3 +1,6 @@
+body{
+  overflow-x: scroll;
+}
 .cart_container{
     padding: 10rem;
 
@@ -25,6 +28,52 @@
 
       }
 }
+
+@media only screen and (max-width: 600px) {
+  .cart_container{
+    padding: 0px;
+  }
+  .product_table{
+    height: 10rem;
+    background-color: #017ff0;
+
+   thead{
+      th{
+
+      font-size: small;
+      font-weight: 800;
+      }
+
+
+      tr{
+        padding: 0px;
+      }
+    }
+      
+    }
+
+   tbody{
+    tr{
+
+        a{
+          img{
+            height: 50px;
+          }
+          p{
+            font-size: small;
+            span{
+              font-size: small;
+            }
+          }
+        }
+      }
+    
+   }
+   td{
+    background-color: #666;
+    width: 50px;}
+  }
+
 
 .product_table{
     width: 100%;
@@ -76,7 +125,7 @@
         height: 8rem;
       }
       strong {
-        color: #333;
+        color: rgb(26, 24, 24);
         display: block;
       }
     
