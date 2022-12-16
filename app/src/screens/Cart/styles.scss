@@ -1,8 +1,5 @@
-body{
-  overflow-x: scroll;
-}
 .cart_container{
-    padding: 10rem;
+    padding: 5rem 15rem;
 
     footer {
         margin-top: 30px;
@@ -29,78 +26,108 @@ body{
       }
 }
 
-@media only screen and (max-width: 600px) {
-  .cart_container{
-    padding: 0px;
-  }
-  .product_table{
-    height: 10rem;
-    background-color: #017ff0;
-
-   thead{
-      th{
-
-      font-size: small;
-      font-weight: 800;
-      }
 
 
-      tr{
-        padding: 0px;
-      }
-    }
-      
-    }
 
-   tbody{
-    tr{
-
-        a{
-          img{
-            height: 50px;
-          }
-          p{
-            font-size: small;
-            span{
-              font-size: small;
-            }
-          }
-        }
-      }
-    
-   }
-   td{
-    background-color: #666;
-    width: 50px;}
-  }
-
-
-.product_table{
+  .product_li{
     width: 100%;
     padding: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 3px;
+    list-style-type: none;
 
     
-  thead th {
-    color: rgb(0, 0, 0);
-    text-align: left;
-    padding: 0.50rem;
+    @media only screen and (max-width: 600px) {
+      .cart_container{
+        padding: 0px;
+      }
+      .ul_body {
+       display: block;
+    
+        li{
+          img{
+            height: 70px;
+          }
+          strong{
+            font-size: small;
+          }
+          .product{
+            position: relative; 
+            left: 1rem;
+          }
+        
+          .quantity{
+            position: relative;
+            top: 3rem;
+          }
+    
+          .sub_total{
+            position: relative;
+            top: 3rem;  
+            left: 1rem;
+          }
+          
+          .icon_trash_button{
+            color: #017ff0;
+            cursor: pointer;
+            position: relative;
+            top: 6.5rem;
+            right: 3rem;  
+         
+    
+          }
+        }
+      }
+    }
 
-  }
-  .th_product{
-    padding-left: 2rem;
+
+ @media only screen and (min-width: 800px) {
+      .ul_body {
+        display: inline-flex;  
+        padding: 0.50rem;
+        border-bottom: 1px solid #eee;
+        border: none;
+        list-style-type: none;
+    
+        justify-content: space-between;
+        width: 100%;
+    
+        li{
+    
+          .product{
+            position: relative; 
+            left: 1rem;
+          }
+        
+          .quantity{
+            position: relative;
+            top: 3rem;
+          }
+    
+          .sub_total{
+            position: relative;
+            top: 3rem;  
+            left: 1rem;
+          }
+          
+          .icon_trash_button{
+            color: #017ff0;
+            cursor: pointer;
+            position: relative;
+            top: 6.5rem;
+            right: 3rem;  
+         
+    
+          }
+        }
+      }
+    }
    
-  }
 
-  tbody td {
-    padding: 0.50rem;
-    border-bottom: 1px solid #eee;
-    border: none;
-  }
+
   .no_product{
 
-    .td_1{
+    .li_1{
       padding-left: 2rem ;
       display: flex;
       align-items: center;
@@ -162,6 +189,7 @@ body{
       .icon_button{
         color: #017ff0;
         cursor: pointer;
+
       }
 }
 
