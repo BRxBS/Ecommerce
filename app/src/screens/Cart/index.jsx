@@ -47,31 +47,22 @@ export function Cart() {
     <>
 
       <div className="cart_container">
-        <table className="product_table">
-          <thead>
-            <tr>
-            
-            <th className="th_product">PRODUTO</th>
-            <th>QUANTIDADE</th>
-            <th>SUBTOTAL</th>
-           
-            </tr>
-          </thead>
-         
+        <ul className="product_li">
 
-          <tbody>
+        
+          <div>
             { total === "R$ 0,000" 
               ?
-                <tr className="no_product">
-                  <td className="td_1">
+                <ul className="no_product">
+                  <li className="li_1">
                   <Handbag size={32} />
                     <p>
                     
                      O carrinho esta vazio.
                     </p>   
-                  </td>
+                  </li>
 
-                  <td>
+                  <li>
                     <div>
                       <button 
                       type="button"
@@ -90,34 +81,37 @@ export function Cart() {
                       <Plus size={28} />
                       </button>
                     </div>
-                  </td>
+                  </li>
 
-                  <td>
+                  <li>
                     <strong>0</strong>
-                  </td>
-                </tr>
+                  </li>
+                </ul>
               : 
             cartFormatted.map((product) => {
      
               return(
-                <tr key={product.id} >
-                  <td>
+             <li key={product.id} className="ul_body">
+
+                  <li>
+                  <h4 className="product">PRODUTO</h4>
                   <Link 
                   style={linkStyle}
                   to={`/products/${product.id}`} 
               >
-                  <>
+                  
                     <img src={product.productImage1} alt="" />
-                  </>
+                  
                   <p>
                       <strong>{product.productName}</strong>
                       <span>{product.priceformatted}</span>
                     </p>
                   </Link>
-                  </td>
+                  </li>
 
-              <td>
-                <div>
+              <li>
+              <h4 className="quantity_h4">QUANTIDADE</h4>
+                <div className="quantity_div">
                   <button 
                   type="button"
                   className="icon_button"
@@ -141,27 +135,29 @@ export function Cart() {
                   </button>
           
                 </div>
-                </td>
-                <td>
-                      <strong>{product.subTotal}</strong>
-                </td>
-                <td>
+                </li>
+                <li>
+                      <h4 className="sub_total_h4">SUBTOTAL</h4>
+                      <strong className="sub_total">{product.subTotal}</strong>
+                </li>
+
+                <li>
                   <button
                   type="button"
-                  className="icon_button"
+                  className="icon_trash_button"
                   onClick={() => handleRemoveProduct(product.id)}
                   >
                   <TrashSimple size={28} />
                   </button>
-                </td>
-                </tr>
+                </li>
+            </li>
                 );
               })}
                   
             
          
-          </tbody>
-        </table>
+          </div>
+        </ul>
 
         <footer >
           <button type="button" >Finalizar pedido</button>
