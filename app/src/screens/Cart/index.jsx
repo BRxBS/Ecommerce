@@ -47,10 +47,7 @@ export function Cart() {
     <>
 
       <div className="cart_container">
-        <ul className="product_li">
-
-        
-          <div>
+        <ul className="product_ul">
             { total === "R$ 0,000" 
               ?
                 <ul className="no_product">
@@ -91,9 +88,9 @@ export function Cart() {
             cartFormatted.map((product) => {
      
               return(
-             <li key={product.id} className="ul_body">
+             <li key={product.id} className="li_body">
 
-                  <li>
+                  <li className="li_prodict">
                   <h4 className="product">PRODUTO</h4>
                   <Link 
                   style={linkStyle}
@@ -109,7 +106,7 @@ export function Cart() {
                   </Link>
                   </li>
 
-              <li>
+              <li className="li_quantity">
               <h4 className="quantity_h4">QUANTIDADE</h4>
                 <div className="quantity_div">
                   <button 
@@ -136,12 +133,12 @@ export function Cart() {
           
                 </div>
                 </li>
-                <li>
+                <li className="li_subTotal">
                       <h4 className="sub_total_h4">SUBTOTAL</h4>
                       <strong className="sub_total">{product.subTotal}</strong>
                 </li>
 
-                <li>
+                <li className="li_remove">
                   <button
                   type="button"
                   className="icon_trash_button"
@@ -150,14 +147,16 @@ export function Cart() {
                   <TrashSimple size={28} />
                   </button>
                 </li>
+              
             </li>
                 );
               })}
                   
             
          
-          </div>
+        
         </ul>
+    
 
         <footer >
           <button type="button" >Finalizar pedido</button>
@@ -170,6 +169,7 @@ export function Cart() {
        
       </div>
     </>
+    
   );
          
            
