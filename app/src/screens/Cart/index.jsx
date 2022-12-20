@@ -90,7 +90,7 @@ export function Cart() {
               return(
              <li key={product.id} className="li_body">
 
-                  <li className="li_prodict">
+                  <li className="li_product">
                   <h4 className="product">PRODUTO</h4>
                   <Link 
                   style={linkStyle}
@@ -159,12 +159,13 @@ export function Cart() {
     
 
         <footer >
-          <button type="button" >Finalizar pedido</button>
           <div className="cart_total">
             <span>TOTAL</span>
+           
             {total === "R$ 0,000" ? <strong>R$ 0</strong> :  <strong>{total}</strong>}
             
           </div>
+          <button type="button" >Finalizar pedido</button>
         </footer>
        
       </div>

@@ -1,29 +1,7 @@
 .cart_container{
   padding: 5rem 15rem;
-
-    footer {
-        margin-top: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    
-        button {
-          background: #017ff0;
-          color: #fff;
-          border: 0;
-          border-radius: 4px;
-          padding: 12px 20px;
-          font-weight: bold;
-          text-transform: uppercase;
-          transition: background 0.2s;
-          cursor: pointer;
-    
-            &:hover{
-                background-color: #017ff0;
-            }
-        }
-
-      }
+ margin-top:  5rem;
+   
 }
 
 
@@ -37,54 +15,6 @@
     border-radius: 3px;
     list-style-type: none;
 
- @media only screen and (min-width: 800px) {
-
-      .li_body {
-        display: inline-flex;  
-        padding: 0.50rem;
-        border-bottom: 1px solid #eee;
-        border: none;
-        list-style-type: none;
-    
-        justify-content: space-between;
-        width: 100%;
-
-      .li_prodict{
-      width: 40%;
-      }
- 
-        li{
-          display: block;
-          .product{
-            position: relative; 
-            left: 1rem;
-          }
-        
-          .quantity_div{
-            position: relative;
-            top: 3rem;
-          }
-    
-          .sub_total{
-            position: relative;
-            top: 3rem;  
-            left: 1rem;
-          }
-          
-          .icon_trash_button{
-            color: #017ff0;
-            cursor: pointer;
-            position: relative;
-            top: 6.5rem;
-            right: 3rem;  
-         
-    
-          }
-        }
-      }
-      
-    }
-   
 
   .no_product{
 
@@ -141,32 +71,100 @@
         background: none;
         border: 0;
         padding: 0.20rem;
-    
-      
-   
-
       }
 
       .icon_button{
         color: #017ff0;
         cursor: pointer;
-
       }
 }
 
-.cart_total{
+
+@media only screen and (min-width: 800px) {
+
+  .li_body {
+    display: inline-flex;  
+    padding: 0.50rem;
+    border-bottom: 1px solid #eee;
+    border: none;
+    list-style-type: none;
+
+    justify-content: space-between;
+    width: 100%;
+
+  .li_prodict{
+  width: 40%;
+  }
+
+    li{
+      display: block;
+      .product{
+        position: relative; 
+        left: 1rem;
+      }
+    
+      .quantity_div{
+        position: relative;
+        top: 3rem;
+      }
+
+      .sub_total{
+        position: relative;
+        top: 3rem;  
+        left: 1rem;
+      }
+      
+      .icon_trash_button{
+        color: #017ff0;
+        cursor: pointer;
+        position: relative;
+        top: 6.5rem;
+        right: 3rem;  
+     
+
+      }
+    }
+  }
+  footer {
+    margin-top: 30px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      background: #017ff0;
+      color: #fff;
+      border: 0;
+      border-radius: 4px;
+      padding: 12px 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background 0.2s;
+      cursor: pointer;
+
+        &:hover{
+            background-color: #017ff0;
+        }
+    }
+
+    
+  .cart_total{
+    display: block;
     align-items: baseline;
-  
+
+
     span {
       color: #999;
       font-weight: bold;
     }
-  
+
     strong {
       font-size: x-large;
       margin-left: 0.25rem;
     }
+  }
+}
+  
 }
 @media only screen and (max-width: 600px) {
   
@@ -177,20 +175,19 @@
   }
   .product_ul{
     padding: 0px;
-    padding-top: 1rem;
     margin: 0px;
-    
- 
     box-shadow: none;
   }
   .li_body {
    display: block;
    height: 16rem;
    padding: 0px;
-   margin-bottom: 2rem;
    border-bottom: 1px solid #999;
  
-
+  .li_remove{
+    height: 0px;
+  }
+  
     li{
       
       img{
@@ -204,10 +201,8 @@
       }
       .product{
         margin-top: 1rem ;
-        margin-bottom: -1rem;
-        position: relative; 
-        left: 0.40rem;
-        bottom: 1rem;
+        margin-bottom: -0.5rem;
+        margin-left: 1rem;
       }
   
 
@@ -244,11 +239,50 @@
         color: #017ff0;
         cursor: pointer;
         position: relative;
-        bottom: 16.5rem;
+        bottom: 17rem;
         left: 15rem;  
      
 
       }
     }
   }
+
+  footer {
+    padding: 2rem ;
+    display: block;
+
+    .cart_total{
+      display: flex;
+      align-items: center;
+   
+      span {
+        padding: 1rem;
+        color: #999;
+        font-weight: bold;
+      }
+    
+      strong {
+        font-size: x-large;
+        margin-left: 0.25rem;
+      }
+  }
+  
+  button {
+    width: 100%;
+    background: #017ff0;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.2s;
+    cursor: pointer;
+
+      &:hover{
+          background-color: #017ff0;
+      }
+  }
+  }
 }
+
