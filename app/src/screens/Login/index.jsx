@@ -1,6 +1,5 @@
 import React, { useEffect, useState, } from "react";
 import { Link } from "react-router-dom";
-import { useUser } from "../../hooks/useUser";
 
 import './styles.scss'
 import subscribe from './inscreva-se.png'
