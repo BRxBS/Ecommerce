@@ -95,14 +95,16 @@ export function Cart() {
                   <Link 
                   style={linkStyle}
                   to={`/products/${product.id}`} 
-              >
+                  >
+                  <div className="img_div">
+                  <img src={product.productImage1} alt="" />
+                  </div>
+                 
                   
-                    <img src={product.productImage1} alt="" />
-                  
-                  <p>
+                   <p>
                       <strong>{product.productName}</strong>
                       <span>{product.priceformatted}</span>
-                    </p>
+                   </p>
                   </Link>
                   </li>
 
