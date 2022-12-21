@@ -5,8 +5,11 @@
   margin: auto;
   grid-template-columns: repeat(4, calc(25% - 8px));
   grid-template-rows: auto;
+  margin-top:  5rem;
+
 }
 .container_map {
+  margin-top:  5rem;
   display: flex;
   box-sizing: border-box;
   font-size: 1rem;
@@ -23,6 +26,7 @@
 
 @media (max-width: 990px) {
   .container_CardProduct {
+    margin-top:  5rem;
     // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-columns: repeat(3, calc(25% - 8px));
     grid-gap: 0.5rem 2rem;
@@ -34,6 +38,7 @@
 
 @media (max-width: 600px) {
   .container_CardProduct {
+    margin-top:  5rem;
     grid-template-columns: repeat(2, calc(25% - 8px));
     grid-gap: 0.5rem 6rem;
     grid-template-rows: auto;
