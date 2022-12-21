@@ -15,7 +15,7 @@ export function Header() {
  
  
   return (
-    <div className='container_header' >
+    <>
       <header className="header">
         <Link to={"/"}>
           <Icon className="icon" />
@@ -44,6 +44,6 @@ export function Header() {
       
         </div>
       </header>
-    </div>
+    </>
   );
 }
