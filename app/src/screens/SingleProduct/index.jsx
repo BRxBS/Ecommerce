@@ -59,7 +59,7 @@ export const SingleProduct = () => {
    
   };
     
-  function handleRemoveProduct(id) {
+  function handleRemoveProductFav(id) {
     removeProduct(id)
 
 
@@ -136,7 +136,7 @@ export const SingleProduct = () => {
 
                     {
                   FavItemsAmount[product.id] > 0
-                  ?  <HeartStraight size={40}    weight="fill" color= "#017ff0"  onClick={() => handleRemoveProduct(product.id)} className="fav_HeartStraight" /> 
+                  ?  <HeartStraight size={40}    weight="fill" color= "#017ff0"  onClick={() => handleRemoveProductFav(product.id)} className="fav_HeartStraight" /> 
                   : <HeartStraight size={40}  onClick={() =>  handleAddProductOnFav(product.id)}  className="fav_HeartStraight"/>
                  }
                       
