@@ -1,18 +1,18 @@
-.container_Card_fav_product {
+.container_fav_product {
     display: grid;
     height: auto;
     grid-gap: 20px 12px;
     margin: auto;
     grid-template-columns: repeat(4, calc(25% - 8px));
     grid-template-rows: auto;
+    margin-top:  5rem;
   }
   .container_fav_map {
     display: flex;
     box-sizing: border-box;
     font-size: 1rem;
     line-height: 1.6;
-  
-    height:23rem;
+    height:25rem;
     width: 15rem;
     margin: 1rem 1rem;
     border-radius: 3px;
@@ -29,6 +29,7 @@
       grid-template-rows: auto;
       margin-right: initial;
       margin-left: initial;
+      margin-top:  5rem;
     }
   }
   
@@ -52,6 +53,28 @@
     }
   }
   
+  .card_button_fav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0.25rem;
+    margin-right: 0.5rem;
+    border: 5px solid black;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+    position: relative;
+    bottom: 20px;
+
+    svg{
+      position: relative;
+      left: 10px;
+    }
+  }
+
   .content_fav_wrapper {
   
     height: 20rem;

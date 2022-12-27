@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { HeartStraight } from "phosphor-react";
+import React from "react";
+import { HeartStraight, ShoppingCart } from "phosphor-react";
 import { Link } from "react-router-dom";
-import { api } from '../../services/api';
 import { useFav } from "../../hooks/useFav";
+import { useCart } from '../../hooks/useCart';
 import "./styles.scss";
 
 
@@ -11,13 +11,16 @@ import "./styles.scss";
 export function Favorite() {
   
   const { fav, removeProduct } = useFav()
-
-
+  const { addProduct } = useCart();
 
   function handleRemoveProduct(id) {
     removeProduct(id)
 
   }
+  function handleAddProductOnCart(id) {
+    addProduct(id);
+   
+  };
   return (
     
       <div className="container_fav_product">
@@ -41,14 +44,14 @@ export function Favorite() {
               </div>
 
               <div className="name_price_fav_wraper">
-                <p>
+                
                   <Link style={{textDecoration: 'none'}}
                     className="name_fav_link"
                     to={`/products/${product.id}`}
                   >
                     {product.productName}
                   </Link>
-                </p>
+                
                 <div className="price_heart_fav_wrapper">
                 <h3
                   className="price_fav"
@@ -63,6 +66,15 @@ export function Favorite() {
                 </div>
   
               </div>
+
+              <button
+              onClick={() => handleAddProductOnCart(product.id)}
+              className="card_button_fav">
+              Adicionar ao carrinho
+              <ShoppingCart
+              weight="fill"
+               size={32} className=" ShoppingCart" />
+              </button>
             </div>
           </div>
         ))}
