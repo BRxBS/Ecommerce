@@ -1,12 +1,14 @@
-import { HeartStraight, ShoppingCart } from "phosphor-react";
-import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import { formatPrice } from "../../util/format";
+import { useParams } from "react-router-dom";
+import { HeartStraight, ShoppingCart } from "phosphor-react";
 import { api } from "../../services/api";
 import { SizeDropdown } from "./sizeDropdown";
+import Slider from "react-slick";
 import { useCart } from '../../hooks/useCart';
 import { useFav } from "../../hooks/useFav"; 
 import './styles.scss'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 
 export const SingleProduct = () => {
@@ -33,9 +35,6 @@ export const SingleProduct = () => {
     return newSumAmount;
   }, 0);
 
-
-
-
   const getTheProducts = () => {
     api.get(`/products/${id}`).then((res) => {
       const Product = res.data;
@@ -46,7 +45,6 @@ export const SingleProduct = () => {
   useEffect(() => {
     getTheProducts();
   }, []);
-
 
 
   function handleAddProductOnCart(id) {
@@ -65,38 +63,87 @@ export const SingleProduct = () => {
 
   }
 
-
-
-
   const options = [   
-    {"id": "P", "productSize": " P"},
-   {"id": "M", "productSize": " M"},
-   {"id": "G", "productSize": " G"},
-   {"id": "GG", "productSize": " GG"}]
+    {"id": "u", "productSize": "Único"},
+  ]
 
+   var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
   return (
 
     <div className="main_container">
 
       <div className="first_container">
-    
+       
+       <div className="slide_imgs">
+        <Slider {...settings}>
+
+        <img className="img_1"
+                src={product?.productImage1}
+              />
+            <img className="img_2"
+                src={product?.productImage2}
+              />
+            <img className="img_3"
+                src={product?.productImage3}
+              />
+            <img className="img_4"
+                src={product?.productImage4}
+              />
+            <img className="img_5"
+                src={product?.productImage5}
+              />
+        </Slider>
+       </div>
+
           <div className="img_wrapper">
 
             <img className="img_1"
                 src={product?.productImage1}
               />
-               <img className="img_2"
+            <img className="img_2"
                 src={product?.productImage2}
               />
-            
-              <img className="img_3"
+            <img className="img_3"
                 src={product?.productImage3}
               />
-               <img className="img_4"
+            <img className="img_4"
                 src={product?.productImage4}
               />
-                <img className="img_5"
+            <img className="img_5"
                 src={product?.productImage5}
               />
            
