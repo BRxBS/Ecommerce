@@ -68,7 +68,7 @@ export const SingleProduct = () => {
   ]
 
    var settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -110,22 +110,35 @@ export const SingleProduct = () => {
        
        <div className="slide_imgs">
         <Slider {...settings}>
-
-        <img className="img_1"
+            <div className="img_wrapper">
+            <img className="img_1"
                 src={product?.productImage1}
               />
+            </div>
+            <div className="img_wrapper">
             <img className="img_2"
                 src={product?.productImage2}
               />
-            <img className="img_3"
+            </div>
+ 
+                <div className="img_wrapper">
+                <img className="img_3"
                 src={product?.productImage3}
-              />
-            <img className="img_4"
+              />       
+              </div>
+
+                <div className="img_wrapper">
+                <img className="img_4"
                 src={product?.productImage4}
               />
-            <img className="img_5"
+              </div>
+    
+                <div className="img_wrapper">
+                <img className="img_5"
                 src={product?.productImage5}
-              />
+              />  
+              </div>
+
         </Slider>
        </div>
 
@@ -161,15 +174,15 @@ export const SingleProduct = () => {
                 </div>
 
 
-                <div className="wrapper">
+              <div className="wrapper">
 
                
                 <div className="dropdown_size_container">
                 <SizeDropdown placeHolder='Tamanhos' options={options}/>
                 </div>
-                  <div className="wrapper_button">
 
 
+                <div className="wrapper_button">
                 <button 
                 type="button"
                 onClick={() => handleAddProductOnCart(product.id)}
@@ -189,7 +202,7 @@ export const SingleProduct = () => {
                       
                       {/* change the colo of the heart */}
               
-                  </div>
+              </div>
 
                
               
