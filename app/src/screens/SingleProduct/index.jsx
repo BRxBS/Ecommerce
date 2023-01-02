@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { HeartStraight, ShoppingCart } from "phosphor-react";
+import { HeartStraight, ShoppingCart, CaretDown, CaretUp } from "phosphor-react";
 import { api } from "../../services/api";
 import { SizeDropdown } from "./sizeDropdown";
 import Slider from "react-slick";
@@ -18,7 +18,8 @@ export const SingleProduct = () => {
   const { addProductFav, fav, removeProduct } = useFav();
   const { addProduct, cart } = useCart();
 
-  console.log("product", product)
+  const [showDetails, setsShowDetails] = useState(false);
+  const [showSizeInfo, setShowSizeInfo] = useState(false);
 
   const cartItemsAmount = cart.reduce((sumAmount, Product) =>{
     const newSumAmount = {...sumAmount};
@@ -46,6 +47,33 @@ export const SingleProduct = () => {
     getTheProducts();
   }, []);
 
+  useEffect(() => {
+    getTheProducts();
+
+    const handlerShowDetails = () => setsShowDetails(false)
+    window.addEventListener('click', handlerShowDetails)
+    return () => {
+        window.addEventListener('click', handlerShowDetails)
+    }
+  }, []);
+
+  useEffect(() => {
+    const handlerSizeInfo = () => setShowSizeInfo(false)
+    window.addEventListener('click', handlerSizeInfo)
+    return () => {
+        window.addEventListener('click', handlerSizeInfo)
+    }
+  }, []);
+
+  const handleInputClickShowDetails = (e) => {
+    e.stopPropagation()
+    setsShowDetails(!showDetails);
+}
+const handleInputClickShowSizeInfo = (e) => {
+  e.stopPropagation()
+
+  setShowSizeInfo(!showSizeInfo);
+}
 
   function handleAddProductOnCart(id) {
     addProduct(id);
@@ -64,11 +92,11 @@ export const SingleProduct = () => {
   }
 
   const options = [   
-    {"id": "u", "productSize": "Único"},
+    {"id": "Único", "productSize": "Único"},
   ]
 
    var settings = {
-    dots: false,
+    dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -174,14 +202,10 @@ export const SingleProduct = () => {
                 </div>
 
 
-              <div className="wrapper">
+              <div className="wrapper_dropdown_button">
 
-               
-                <div className="dropdown_size_container">
                 <SizeDropdown placeHolder='Tamanhos' options={options}/>
-                </div>
-
-
+      
                 <div className="wrapper_button">
                 <button 
                 type="button"
@@ -214,7 +238,7 @@ export const SingleProduct = () => {
       <div className="second_container">
 
       <div className="wrapper">
-  <div className="tabs">
+        <div className="tabs">
     <div className="tab">
       <input type="radio" name="css-tabs" id="tab-1" defaultChecked className="tab-switch" />
 
@@ -328,14 +352,139 @@ export const SingleProduct = () => {
         </div>
     </div>
   
-  </div>
-
-</div>
-
-
       </div>
-      
+        
+        <div onClick={handleInputClickShowDetails} className="details_dropdown" >
+          <div className="label_CaretUp_down">
+          <label >OS DETALHES</label>
+        <div className="dropdown_size_tool">
+              {showDetails ? <CaretUp size={25} /> :  <CaretDown size={25}  />}
+            </div>
+          </div>
+
+        {showDetails && (
+        <div className="details_dropdown_content">
+          
+           <div className="first-box">
+             <span>
+               <h3>{product.productName}</h3>
+               <p className="productDiscription">{product.productDiscription}</p>
+             </span>
    
+             <span>
+             <h4>Destaques</h4>
+                 <ul className="destaques_ul" >
+            
+             
+                 </ul>
+             </span>
+           </div>
+           <div className="second-box">
+             <span>
+               <h4>Composição</h4>
+               <p>algodão</p>
+             </span>
+   
+             <span>
+               <h4>Instruções de lavagem</h4>
+               <p>Lavar na máquina</p>
+             </span>
+   
+             <span>
+               <h4>IDs do produto</h4>
+               <p>ID da marca: AMAI21002</p>
+             </span>
+             
+           </div>
+           <div className="third-box">
+           <img 
+                   src={product?.productImage2}
+                 />
+           </div>
+
+           </div>
+        )}
+
+
+        
+        </div>
+       
+        <div onClick={handleInputClickShowSizeInfo} className="details_dropdown" >
+          <div className="label_CaretUp_down">
+          <label>TAMANHOS & MEDIDAS</label>
+        <div className="dropdown_size_tool">
+              {showSizeInfo ? <CaretUp size={25} /> :  <CaretDown size={25}  />}
+            </div>
+          </div>
+
+        {showSizeInfo && (
+        <div className="details_dropdown_content">
+          
+    
+          <div className="first-box">
+    
+          <span>
+          <h4>Informações sobre tamanhos</h4>
+              <ul className="Informações_ul" >
+                <li>Essa peça possui numeração correspondente ao seu tamanho real. Recomendamos a compra de seu tamanho regular</li>
+                <li>Possui modelagem slim</li>
+                <li>Feito com um tecido de peso mediano sem stretch</li>
+              </ul>
+          </span>
+
+          <div>
+          <h4>Informações sobre tamanhos</h4>
+          <table>
+            <tbody>
+            <tr>
+              <td>Altura</td>
+              <td>0,01 m</td>
+            </tr>
+            <tr>
+              <td>Busto/peito</td>
+              <td>81 cm</td>
+            </tr>
+            <tr>
+              <td>Quadril</td>
+              <td>93 cm</td>
+            </tr>
+            <tr>
+              <td>Cintura</td>
+              <td>61 cm</td>
+            </tr>
+            </tbody>
+          </table>
+
+          <p>O(a) modelo mede 0,01 m e está usando tamanho P (BR).</p>
+
+          </div>
+
+        </div>
+        <div className="second-box">
+          <span>
+            <h4>Composição</h4>
+            <p>algodão</p>
+          </span>
+
+          <span>
+            <h4>Instruções de lavagem</h4>
+            <p>Lavar na máquina</p>
+          </span>
+
+          <span>
+            <h4>IDs do produto</h4>
+            <p>ID da marca: AMAI21002</p>
+          </span>
+            </div> 
+      
+        </div>
+        )}
+
+
+        
+        </div>
+      </div> 
+     </div>
     </div>
   );
 
