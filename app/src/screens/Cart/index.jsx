@@ -50,40 +50,14 @@ export function Cart() {
         <ul className="product_ul">
             { total === "R$ 0,000" 
               ?
-                <ul className="no_product">
-                  <li className="li_1">
-                  <Handbag size={32} />
+                <div className="no_product">
+                  <div className="li_1">
+                  <Handbag size={40} />
                     <p>
-                    
                      O carrinho esta vazio.
                     </p>   
-                  </li>
-
-                  <li>
-                    <div>
-                      <button 
-                      type="button"
-                      className="icon_button">
-                      <Minus size={28} />
-                      </button>
-
-                      <input 
-                      type="text" 
-                      readOnly
-                      />
-
-                      <button
-                      type="button"
-                      className="icon_button">
-                      <Plus size={28} />
-                      </button>
-                    </div>
-                  </li>
-
-                  <li>
-                    <strong>0</strong>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               : 
             cartFormatted.map((product) => {
      
@@ -107,7 +81,9 @@ export function Cart() {
                    </p>
                   </Link>
                   </li>
+              <div className="quantity_subtotal_wrapper">
 
+             
               <li className="li_quantity">
               <h4 className="quantity_h4">QUANTIDADE</h4>
                 <div className="quantity_div">
@@ -133,12 +109,13 @@ export function Cart() {
                   <Plus size={28} />
                   </button>
           
-                </div>
+              </div>
                 </li>
                 <li className="li_subTotal">
                       <h4 className="sub_total_h4">SUBTOTAL</h4>
                       <strong className="sub_total">{product.subTotal}</strong>
                 </li>
+                </div>
 
                 <li className="li_remove">
                   <button
