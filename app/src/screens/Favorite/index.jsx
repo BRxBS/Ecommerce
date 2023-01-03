@@ -22,7 +22,7 @@ export function Favorite() {
    
   };
   return (
-    
+    <div className="favorite_container">
       <div className="container_fav_product">
         {fav.map((product) => (
           <div
@@ -79,6 +79,6 @@ export function Favorite() {
           </div>
         ))}
       </div>
-    
+      </div>
   );
 }

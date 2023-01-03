@@ -1,3 +1,8 @@
+.favorite_container{
+background-color: aqua;
+padding: 1rem;
+}
+
 .container_fav_product {
     display: grid;
     height: auto;
@@ -6,6 +11,7 @@
     grid-template-columns: repeat(4, calc(25% - 8px));
     grid-template-rows: auto;
     margin-top:  5rem;
+    background-color: #017ff0;
   }
   .container_fav_map {
     display: flex;
