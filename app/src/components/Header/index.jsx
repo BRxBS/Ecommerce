@@ -1,8 +1,6 @@
-import { ShoppingCart, MagnifyingGlass, HeartStraight } from "phosphor-react";
+import { ShoppingCart, HeartStraight } from "phosphor-react";
 import Icon from "../Icon/Icon";
-import SmallIcon from '../Icon/SmallIcon'
 import { Link } from "react-router-dom";
-import { TheModal } from "../Modal";
 import { useCart } from "../../hooks/useCart";
 import { useFav } from "../../hooks/useFav";
 import "./styles.scss";
