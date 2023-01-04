@@ -43,7 +43,7 @@ export function Favorite() {
               </Link>
               </div>
 
-              <div className="name_price_fav_wraper">
+              <div className="name_price_fav_wrapper">
                 
                   <Link style={{textDecoration: 'none'}}
                     className="name_fav_link"

@@ -24,30 +24,6 @@
   
 }
 
-@media (max-width: 990px) {
-  .container_CardProduct {
-    margin-top:  5rem;
-    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-columns: repeat(3, calc(25% - 8px));
-    grid-gap: 0.5rem 2rem;
-    grid-template-rows: auto;
-    margin-right: initial;
-    margin-left: initial;
-  }
-}
-
-@media (max-width: 660px) {
-  .container_CardProduct {
-    margin-top:  5rem;
-    grid-template-columns: repeat(2, calc(25% - 8px));
-    grid-gap: 0.5rem 6rem;
-    grid-template-rows: auto;
-    margin-right: initial;
-    margin-left: initial;
-  }
-}
-
-
 
 .content_wrapper {
 
@@ -139,6 +115,19 @@
 }
 
 }
+
+@media (min-width: 760px) and (max-width: 960px) {
+  .container_CardProduct {
+    margin-top:  5rem;
+    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, calc(25% - 8px));
+    grid-gap: 0.5rem 3rem;
+    grid-template-rows: auto;
+    margin-right: initial;
+    margin-left: initial;
+  }
+}
+
 
 @media only screen and  (min-width: 620px) and (max-width: 760px){
   .container_CardProduct {
