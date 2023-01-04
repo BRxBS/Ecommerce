@@ -7,6 +7,8 @@ import { FavProvider } from './hooks/useFav';
 
 function App() {
   return (
+    // to start the db.json 
+    // npx json-server -p 8000 -w db.json
     <>
       <BrowserRouter>
         <FavProvider>
