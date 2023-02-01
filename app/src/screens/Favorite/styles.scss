@@ -8,7 +8,7 @@ margin: auto;
   height: auto;
   grid-gap: 20px 12px;
   margin: auto;
-  grid-template-columns: repeat(4, calc(25% - 8px));
+  grid-template-columns: repeat(4, calc(30% - 8px));
   grid-template-rows: auto;
   margin-top:  5rem;
 
@@ -123,11 +123,11 @@ margin: auto;
   .favorite_container{
 
     .container_fav_product {
-      grid-template-columns: repeat(3, calc(25% - 8px));
-      grid-gap: 0.5rem 3rem;
+      grid-template-columns: repeat(3, calc(30% - 8px));
+      grid-gap: 0.5rem 1rem;
       grid-template-rows: auto;
       margin-right: initial;
-      margin-left: initial;
+      margin-left: initial;;
     }
   }
 
